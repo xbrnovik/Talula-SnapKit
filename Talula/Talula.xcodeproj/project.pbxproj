@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2321F9C92201AC61005A5000 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9C82201AC61005A5000 /* BaseView.swift */; };
+		2321F9CD2201ACAC005A5000 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9CC2201ACAC005A5000 /* MasterViewController.swift */; };
+		2321F9CF2201B00E005A5000 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9CE2201B00E005A5000 /* MasterView.swift */; };
+		2321F9D12201B0A2005A5000 /* MasterDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */; };
+		2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D22201B2FF005A5000 /* MasterCell.swift */; };
+		2321F9D52201B667005A5000 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D42201B667005A5000 /* Constants.swift */; };
+		233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409CB2201A9B90030C269 /* AppDelegate.swift */; };
+		233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409CD2201A9B90030C269 /* DetailViewController.swift */; };
+		233409D32201A9BA0030C269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233409D22201A9BA0030C269 /* Assets.xcassets */; };
+		233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233409D42201A9BA0030C269 /* LaunchScreen.storyboard */; };
+		233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409E02201A9BA0030C269 /* TalulaTests.swift */; };
+		4195E4B6F43EDA67DA3E83AF /* Pods_Talula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD983BBEA73C8FFB124F267 /* Pods_Talula.framework */; };
+		6F2FC5C044F7F29F10CFE244 /* Pods_TalulaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABE747F020A15055CE44455 /* Pods_TalulaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		233409DD2201A9BA0030C269 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 233409C02201A9B90030C269 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 233409C72201A9B90030C269;
+			remoteInfo = Talula;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ABE747F020A15055CE44455 /* Pods_TalulaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalulaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BD983BBEA73C8FFB124F267 /* Pods_Talula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2321F9C82201AC61005A5000 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2321F9CC2201ACAC005A5000 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		2321F9CE2201B00E005A5000 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDelegateDataSource.swift; sourceTree = "<group>"; };
+		2321F9D22201B2FF005A5000 /* MasterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCell.swift; sourceTree = "<group>"; };
+		2321F9D42201B667005A5000 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		233409C82201A9B90030C269 /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		233409CB2201A9B90030C269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		233409CD2201A9B90030C269 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		233409D22201A9BA0030C269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		233409D52201A9BA0030C269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		233409D72201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233409DC2201A9BA0030C269 /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		233409E02201A9BA0030C269 /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
+		233409E22201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FFD543B5518827FBD00EF21 /* Pods-TalulaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.release.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.release.xcconfig"; sourceTree = "<group>"; };
+		78994BFD74C7F80309DF82BC /* Pods-Talula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.release.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.release.xcconfig"; sourceTree = "<group>"; };
+		895F782FFEFBBA8BCF36B4B0 /* Pods-TalulaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.debug.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C671D23EDB89F1192C8A066 /* Pods-Talula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.debug.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		233409C52201A9B90030C269 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4195E4B6F43EDA67DA3E83AF /* Pods_Talula.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233409D92201A9BA0030C269 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F2FC5C044F7F29F10CFE244 /* Pods_TalulaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		233409BF2201A9B90030C269 = {
+			isa = PBXGroup;
+			children = (
+				233409CA2201A9B90030C269 /* Talula */,
+				233409DF2201A9BA0030C269 /* TalulaTests */,
+				233409C92201A9B90030C269 /* Products */,
+				816C3EDC43DB716F0ECD0875 /* Pods */,
+				EE6DFB117EEB082EB222209C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		233409C92201A9B90030C269 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				233409C82201A9B90030C269 /* Talula.app */,
+				233409DC2201A9BA0030C269 /* TalulaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		233409CA2201A9B90030C269 /* Talula */ = {
+			isa = PBXGroup;
+			children = (
+				233409CB2201A9B90030C269 /* AppDelegate.swift */,
+				233409D22201A9BA0030C269 /* Assets.xcassets */,
+				233409D42201A9BA0030C269 /* LaunchScreen.storyboard */,
+				233409D72201A9BA0030C269 /* Info.plist */,
+				2321F9C82201AC61005A5000 /* BaseView.swift */,
+				2321F9CC2201ACAC005A5000 /* MasterViewController.swift */,
+				2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */,
+				2321F9D22201B2FF005A5000 /* MasterCell.swift */,
+				2321F9D42201B667005A5000 /* Constants.swift */,
+				2321F9CE2201B00E005A5000 /* MasterView.swift */,
+				233409CD2201A9B90030C269 /* DetailViewController.swift */,
+			);
+			path = Talula;
+			sourceTree = "<group>";
+		};
+		233409DF2201A9BA0030C269 /* TalulaTests */ = {
+			isa = PBXGroup;
+			children = (
+				233409E02201A9BA0030C269 /* TalulaTests.swift */,
+				233409E22201A9BA0030C269 /* Info.plist */,
+			);
+			path = TalulaTests;
+			sourceTree = "<group>";
+		};
+		816C3EDC43DB716F0ECD0875 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C671D23EDB89F1192C8A066 /* Pods-Talula.debug.xcconfig */,
+				78994BFD74C7F80309DF82BC /* Pods-Talula.release.xcconfig */,
+				895F782FFEFBBA8BCF36B4B0 /* Pods-TalulaTests.debug.xcconfig */,
+				4FFD543B5518827FBD00EF21 /* Pods-TalulaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE6DFB117EEB082EB222209C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BD983BBEA73C8FFB124F267 /* Pods_Talula.framework */,
+				0ABE747F020A15055CE44455 /* Pods_TalulaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		233409C72201A9B90030C269 /* Talula */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 233409E52201A9BA0030C269 /* Build configuration list for PBXNativeTarget "Talula" */;
+			buildPhases = (
+				45016BC7B649CC7622AE62EB /* [CP] Check Pods Manifest.lock */,
+				233409C42201A9B90030C269 /* Sources */,
+				233409C52201A9B90030C269 /* Frameworks */,
+				233409C62201A9B90030C269 /* Resources */,
+				F9105C6BE14FB4D67274094A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Talula;
+			productName = Talula;
+			productReference = 233409C82201A9B90030C269 /* Talula.app */;
+			productType = "com.apple.product-type.application";
+		};
+		233409DB2201A9BA0030C269 /* TalulaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 233409E82201A9BA0030C269 /* Build configuration list for PBXNativeTarget "TalulaTests" */;
+			buildPhases = (
+				BD5BB40B3C852309C55AF963 /* [CP] Check Pods Manifest.lock */,
+				233409D82201A9BA0030C269 /* Sources */,
+				233409D92201A9BA0030C269 /* Frameworks */,
+				233409DA2201A9BA0030C269 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				233409DE2201A9BA0030C269 /* PBXTargetDependency */,
+			);
+			name = TalulaTests;
+			productName = TalulaTests;
+			productReference = 233409DC2201A9BA0030C269 /* TalulaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		233409C02201A9B90030C269 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Diana Brnovik";
+				TargetAttributes = {
+					233409C72201A9B90030C269 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					233409DB2201A9BA0030C269 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 233409C72201A9B90030C269;
+					};
+				};
+			};
+			buildConfigurationList = 233409C32201A9B90030C269 /* Build configuration list for PBXProject "Talula" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 233409BF2201A9B90030C269;
+			productRefGroup = 233409C92201A9B90030C269 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				233409C72201A9B90030C269 /* Talula */,
+				233409DB2201A9BA0030C269 /* TalulaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		233409C62201A9B90030C269 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */,
+				233409D32201A9BA0030C269 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233409DA2201A9BA0030C269 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45016BC7B649CC7622AE62EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Talula-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD5BB40B3C852309C55AF963 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TalulaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9105C6BE14FB4D67274094A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		233409C42201A9B90030C269 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2321F9CD2201ACAC005A5000 /* MasterViewController.swift in Sources */,
+				2321F9C92201AC61005A5000 /* BaseView.swift in Sources */,
+				2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */,
+				233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */,
+				2321F9CF2201B00E005A5000 /* MasterView.swift in Sources */,
+				233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */,
+				2321F9D12201B0A2005A5000 /* MasterDelegateDataSource.swift in Sources */,
+				2321F9D52201B667005A5000 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233409D82201A9BA0030C269 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		233409DE2201A9BA0030C269 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 233409C72201A9B90030C269 /* Talula */;
+			targetProxy = 233409DD2201A9BA0030C269 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		233409D42201A9BA0030C269 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				233409D52201A9BA0030C269 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		233409E32201A9BA0030C269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		233409E42201A9BA0030C269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		233409E62201A9BA0030C269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C671D23EDB89F1192C8A066 /* Pods-Talula.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UAN795U56;
+				INFOPLIST_FILE = Talula/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.Talula;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		233409E72201A9BA0030C269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78994BFD74C7F80309DF82BC /* Pods-Talula.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UAN795U56;
+				INFOPLIST_FILE = Talula/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.Talula;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		233409E92201A9BA0030C269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 895F782FFEFBBA8BCF36B4B0 /* Pods-TalulaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UAN795U56;
+				INFOPLIST_FILE = TalulaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.TalulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talula.app/Talula";
+			};
+			name = Debug;
+		};
+		233409EA2201A9BA0030C269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFD543B5518827FBD00EF21 /* Pods-TalulaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UAN795U56;
+				INFOPLIST_FILE = TalulaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.TalulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talula.app/Talula";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		233409C32201A9B90030C269 /* Build configuration list for PBXProject "Talula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233409E32201A9BA0030C269 /* Debug */,
+				233409E42201A9BA0030C269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233409E52201A9BA0030C269 /* Build configuration list for PBXNativeTarget "Talula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233409E62201A9BA0030C269 /* Debug */,
+				233409E72201A9BA0030C269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233409E82201A9BA0030C269 /* Build configuration list for PBXNativeTarget "TalulaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233409E92201A9BA0030C269 /* Debug */,
+				233409EA2201A9BA0030C269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 233409C02201A9B90030C269 /* Project object */;
+}
