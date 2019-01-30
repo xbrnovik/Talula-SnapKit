@@ -62,7 +62,6 @@ class MasterViewController: UIViewController {
     }
     
     func presentDetail(meteorite: Meteorite) {
-        print(navigationController==nil)
         self.navigationController?.pushViewController(detailViewConstroller, animated: true)
     }
     
