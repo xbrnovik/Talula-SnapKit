@@ -8,12 +8,18 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 struct Constants {
     
     struct ui {
         static let masterReusableCellId: String = "masterCell"
         static let bigMargin: CGFloat = 15
+    }
+    
+    struct map {
+        static let latitudeDelta: CLLocationDegrees = 0.05
+        static let longitudeDelta: CLLocationDegrees = 0.05
     }
     
 }

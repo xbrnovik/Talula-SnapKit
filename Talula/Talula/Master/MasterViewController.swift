@@ -48,8 +48,8 @@ class MasterViewController: UIViewController {
             self?.presentDetail(meteorite: meteorite)
         }
         
-        let meteoriteOne = Meteorite(id: 1, fall: "Fell", geotype: "Point", latitude: 6.08333, longitude: 50.775, mass: 21, name: "Aachen", year: Date())
-        let meteoriteTwo = Meteorite(id: 1, fall: "Fell", geotype: "Point", latitude: 10.23333, longitude: 56.18333, mass: 720, name: "Aarhus", year: Date())
+        let meteoriteOne = Meteorite(id: 1, fall: "Fell", geotype: "Point", latitude: 50.775, longitude: 6.08333, mass: 21, name: "Aachen", year: Date())
+        let meteoriteTwo = Meteorite(id: 1, fall: "Fell", geotype: "Point", latitude: 56.18333, longitude: 10.23333, mass: 720, name: "Aarhus", year: Date())
         self.masterDelegateDataSource.setNewFetchResults(meteorites: [meteoriteOne,meteoriteTwo])
     }
     
@@ -62,6 +62,7 @@ class MasterViewController: UIViewController {
     }
     
     func presentDetail(meteorite: Meteorite) {
+        detailViewConstroller.setModel(meteorite)
         self.navigationController?.pushViewController(detailViewConstroller, animated: true)
     }
     
