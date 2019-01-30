@@ -18,6 +18,8 @@
 		233409D32201A9BA0030C269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233409D22201A9BA0030C269 /* Assets.xcassets */; };
 		233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233409D42201A9BA0030C269 /* LaunchScreen.storyboard */; };
 		233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409E02201A9BA0030C269 /* TalulaTests.swift */; };
+		2384C60F2201C56C005CDE9D /* Meteorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C60E2201C56C005CDE9D /* Meteorite.swift */; };
+		2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6122201D3D7005CDE9D /* AppStarter.swift */; };
 		4195E4B6F43EDA67DA3E83AF /* Pods_Talula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD983BBEA73C8FFB124F267 /* Pods_Talula.framework */; };
 		6F2FC5C044F7F29F10CFE244 /* Pods_TalulaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABE747F020A15055CE44455 /* Pods_TalulaTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		233409DC2201A9BA0030C269 /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		233409E02201A9BA0030C269 /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
 		233409E22201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2384C60E2201C56C005CDE9D /* Meteorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteorite.swift; sourceTree = "<group>"; };
+		2384C6122201D3D7005CDE9D /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
 		4FFD543B5518827FBD00EF21 /* Pods-TalulaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.release.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.release.xcconfig"; sourceTree = "<group>"; };
 		78994BFD74C7F80309DF82BC /* Pods-Talula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.release.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.release.xcconfig"; sourceTree = "<group>"; };
 		895F782FFEFBBA8BCF36B4B0 /* Pods-TalulaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.debug.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,16 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				233409CB2201A9B90030C269 /* AppDelegate.swift */,
+				2384C6122201D3D7005CDE9D /* AppStarter.swift */,
+				2321F9D42201B667005A5000 /* Constants.swift */,
+				2321F9C82201AC61005A5000 /* BaseView.swift */,
 				233409D22201A9BA0030C269 /* Assets.xcassets */,
 				233409D42201A9BA0030C269 /* LaunchScreen.storyboard */,
 				233409D72201A9BA0030C269 /* Info.plist */,
-				2321F9C82201AC61005A5000 /* BaseView.swift */,
-				2321F9CC2201ACAC005A5000 /* MasterViewController.swift */,
-				2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */,
-				2321F9D22201B2FF005A5000 /* MasterCell.swift */,
-				2321F9D42201B667005A5000 /* Constants.swift */,
-				2321F9CE2201B00E005A5000 /* MasterView.swift */,
-				233409CD2201A9B90030C269 /* DetailViewController.swift */,
+				2384C6102201CA33005CDE9D /* Master */,
+				2384C6112201CA3D005CDE9D /* Detail */,
+				2384C60E2201C56C005CDE9D /* Meteorite.swift */,
 			);
 			path = Talula;
 			sourceTree = "<group>";
@@ -121,6 +124,25 @@
 				233409E22201A9BA0030C269 /* Info.plist */,
 			);
 			path = TalulaTests;
+			sourceTree = "<group>";
+		};
+		2384C6102201CA33005CDE9D /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				2321F9CC2201ACAC005A5000 /* MasterViewController.swift */,
+				2321F9CE2201B00E005A5000 /* MasterView.swift */,
+				2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */,
+				2321F9D22201B2FF005A5000 /* MasterCell.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		2384C6112201CA3D005CDE9D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				233409CD2201A9B90030C269 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		816C3EDC43DB716F0ECD0875 /* Pods */ = {
@@ -320,7 +342,9 @@
 				2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */,
 				233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */,
 				2321F9CF2201B00E005A5000 /* MasterView.swift in Sources */,
+				2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */,
 				233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */,
+				2384C60F2201C56C005CDE9D /* Meteorite.swift in Sources */,
 				2321F9D12201B0A2005A5000 /* MasterDelegateDataSource.swift in Sources */,
 				2321F9D52201B667005A5000 /* Constants.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 
 class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    private var meteorites: [String] = ["Prvy","Druhy","Treti"]
+    private var meteorites: [Meteorite] = []
     
     var hasResults: Bool {
         get {
@@ -24,9 +24,9 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         }
     }
     
-    var presentDetailHandler: ((String) -> ())?
+    var presentDetailHandler: ((Meteorite) -> ())?
         
-    func setNewFetchResults(meteorites: [String]) {
+    func setNewFetchResults(meteorites: [Meteorite]) {
         self.meteorites = meteorites
     }
     
@@ -43,7 +43,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell()
         let cell: MasterCell? = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
-        cell?.titleLabel.text = meteorites[indexPath.row]
+        cell?.titleLabel.text = meteorites[indexPath.row].name
         return cell ?? defaultCell
         
     }

@@ -11,14 +11,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
+    var appStarter: AppStarter? = nil
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Creates master view.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MasterViewController()
-        window?.makeKeyAndVisible()
+        self.appStarter = AppStarter()
+        
         return true
     }
 
