@@ -8,26 +8,16 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    private var meteorites: [Meteorite] = []
-    
-    var hasResults: Bool {
-        get {
-            if !meteorites.isEmpty {
-                return true
-            } else {
-                return false
-            }
-            
-        }
-    }
+    private var meteoritesFRC: NSFetchedResultsController<Meteorite>
     
     var presentDetailHandler: ((Meteorite) -> ())?
         
-    func setNewFetchResults(meteorites: [Meteorite]) {
-        self.meteorites = meteorites
+    init(meteoritesFRC: NSFetchedResultsController<Meteorite>) {
+        self.meteoritesFRC = meteoritesFRC
     }
     
     // MARK: - UITableViewDataSource
@@ -37,13 +27,13 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meteorites.count
+        return meteoritesFRC.fetchedObjects?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell()
         let cell: MasterCell? = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
-        cell?.titleLabel.text = meteorites[indexPath.row].name
+        cell?.titleLabel.text = self.meteoritesFRC.object(at: indexPath).name ?? "Unknown name"
         return cell ?? defaultCell
         
     }
@@ -56,7 +46,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMeteorite = meteorites[indexPath.row]
+        let selectedMeteorite = self.meteoritesFRC.object(at: indexPath)
         presentDetailHandler?(selectedMeteorite)
         tableView.deselectRow(at: indexPath, animated: true)
     }

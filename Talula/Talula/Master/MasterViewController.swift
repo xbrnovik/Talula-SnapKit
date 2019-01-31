@@ -7,15 +7,8 @@
 //
 
 import Foundation
-//
-//  ViewController.swift
-//  Sion
-//
-//  Created by Diana Brnovik on 29/01/2019.
-//  Copyright © 2019 Diana Brnovik. All rights reserved.
-//
-
 import UIKit
+import CoreData
 
 class MasterViewController: UIViewController {
     
@@ -26,31 +19,36 @@ class MasterViewController: UIViewController {
         return view
     }()
     
-    let masterDelegateDataSource: MasterDelegateDataSource
-    
+    var masterDelegateDataSource: MasterDelegateDataSource? = nil
+    var meteoriteStorage: MeteoriteStorage? = nil
     let detailViewConstroller: DetailViewController
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     init() {
-        self.masterDelegateDataSource = MasterDelegateDataSource()
         self.detailViewConstroller = DetailViewController()
         super.init(nibName: nil, bundle: nil)
         
         self.view = masterView
         self.title = "Master"
+        
+        self.meteoriteStorage = MeteoriteStorage(delegate: self)
+        
+        guard
+            let meteoriteStorage = meteoriteStorage
+        else {
+            return
+        }
+        
+        masterDelegateDataSource = MasterDelegateDataSource(meteoritesFRC: meteoriteStorage.fetchedResultsController)
         masterView.listView.delegate = masterDelegateDataSource
         masterView.listView.dataSource = masterDelegateDataSource
-        masterDelegateDataSource.presentDetailHandler = { [weak self] (meteorite) in
+        masterDelegateDataSource?.presentDetailHandler = { [weak self] (meteorite) in
             self?.presentDetail(meteorite: meteorite)
         }
         
-        let meteoriteOne = Meteorite(id: 1, fall: "Fell", geotype: "Point", latitude: 50.775, longitude: 6.08333, mass: 21, name: "Aachen", year: Date())
-        let meteoriteTwo = Meteorite(id: 1, fall: "Fell", geotype: "Point", latitude: 56.18333, longitude: 10.23333, mass: 720, name: "Aarhus", year: Date())
-        self.masterDelegateDataSource.setNewFetchResults(meteorites: [meteoriteOne,meteoriteTwo])
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -68,3 +66,10 @@ class MasterViewController: UIViewController {
     
 }
 
+extension MasterViewController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        self.masterView.listView.reloadData()
+    }
+    
+}

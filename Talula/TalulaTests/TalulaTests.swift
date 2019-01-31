@@ -8,20 +8,44 @@
 
 import XCTest
 @testable import Talula
+import CoreData
 
 class TalulaTests: XCTestCase {
+    
+//    lazy var persistentContainer: NSPersistentContainer = {
+//        let container = NSPersistentContainer(name: "Talula")
+//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+//            if let error = error as NSError? {
+//
+//                fatalError("Unresolved error \(error), \(error.userInfo)")
+//            }
+//        })
+//        return container
+//    }()
+    
+//    var storage: AppStorage?
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+//        storage = AppStorage(managedObjectContext: persistentContainer.viewContext)
+        
+        
+        
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetAll() {
+//        let newMeteorite = storage?.newObject()
+//        newMeteorite?.name = "moje superne"
+//        storage?.create()
+//
+//        let itemFRC = storage!.getAll()
+//
+//        print(itemFRC.fetchedObjects!.count)
+        
     }
 
     func testPerformanceExample() {

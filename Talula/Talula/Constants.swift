@@ -22,4 +22,16 @@ struct Constants {
         static let longitudeDelta: CLLocationDegrees = 0.05
     }
     
+    struct error {
+        static let dataDomain = "dataError"
+        static let emptyReceivedData = 101
+        static let incorrectDataFormat = 102
+        static let syncFailure = 103
+    }
+    
+    struct coreData {
+        static let entityName: String = "Meteorite"
+        static let defaultDescriptorPropertyName: String = "date"
+    }
+    
 }
