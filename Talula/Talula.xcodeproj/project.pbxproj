@@ -27,6 +27,7 @@
 		23C8D9C9220225780000B4FD /* SourceDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9C8220225780000B4FD /* SourceDataDownloader.swift */; };
 		23C8D9CB220226C30000B4FD /* SourceDataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9CA220226C30000B4FD /* SourceDataSync.swift */; };
 		23C8D9CD220246DE0000B4FD /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */; };
+		23C8D9CF220343FE0000B4FD /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9CE220343FE0000B4FD /* DataSync.swift */; };
 		6B411A973E53A0D16870F23C /* Pods_Talula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005BDD46A75274AAC9D5D612 /* Pods_Talula.framework */; };
 		D1073FC182EDD9FCBD7D5C4A /* Pods_TalulaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7171D1B861DE957A8F5532C /* Pods_TalulaTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		23C8D9C8220225780000B4FD /* SourceDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDataDownloader.swift; sourceTree = "<group>"; };
 		23C8D9CA220226C30000B4FD /* SourceDataSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDataSync.swift; sourceTree = "<group>"; };
 		23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
+		23C8D9CE220343FE0000B4FD /* DataSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSync.swift; sourceTree = "<group>"; };
 		2839A85C2062DF988D26CE8A /* Pods-TalulaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.debug.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77C6EBFC0310351F30C37981 /* Pods-Talula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.debug.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.debug.xcconfig"; sourceTree = "<group>"; };
 		C812E33CC1752583EC8BBFEE /* Pods-Talula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.release.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				233409CB2201A9B90030C269 /* AppDelegate.swift */,
+				23C8D9CE220343FE0000B4FD /* DataSync.swift */,
 				23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */,
 				2384C6122201D3D7005CDE9D /* AppStarter.swift */,
 				2321F9D42201B667005A5000 /* Constants.swift */,
@@ -247,6 +250,11 @@
 				TargetAttributes = {
 					233409C72201A9B90030C269 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					233409DB2201A9BA0030C269 = {
 						CreatedOnToolsVersion = 10.1;
@@ -366,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C8D9CF220343FE0000B4FD /* DataSync.swift in Sources */,
 				23C8D9CD220246DE0000B4FD /* CoreDataContainer.swift in Sources */,
 				2321F9CD2201ACAC005A5000 /* MasterViewController.swift in Sources */,
 				2384C61A2201E42F005CDE9D /* MeteoriteStorage.swift in Sources */,

@@ -12,17 +12,15 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var appStarter: AppStarter? = nil
-    var sourceDataSync: SourceDataSync? = nil
+    var appStarter: AppStarter?
+    var dataSync: DataSync?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Creates master view.
         self.appStarter = AppStarter()
-        
-        self.sourceDataSync = SourceDataSync()
-        self.sourceDataSync?.fetchMeteorites(completion: { (error) in
-            //handle error
-        })
+        // Starts data download if necessary.
+        self.dataSync = DataSync()
+        self.dataSync?.foregroundRun()
         return true
     }
 
@@ -31,7 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        //
+        application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
+    }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        self.dataSync?.backgroundRun(completionHandler)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
