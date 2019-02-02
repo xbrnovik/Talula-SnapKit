@@ -20,7 +20,7 @@ class MeteoriteStorage {
         let fetchRequest: NSFetchRequest<Meteorite> = NSFetchRequest()
         let entity = NSEntityDescription.entity(forEntityName: Constants.coreData.entityName, in: self.managedObjectContext)
         fetchRequest.entity = entity
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: false)]
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = delegate
         do {

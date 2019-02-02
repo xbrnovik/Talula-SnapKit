@@ -34,7 +34,7 @@ struct Constants {
     
     struct coreData {
         static let entityName: String = "Meteorite"
-        static let defaultDescriptorPropertyName: String = "date"
+        static let defaultDescriptorPropertyName: String = "mass"
     }
     
     struct fonts {
@@ -48,6 +48,16 @@ struct Constants {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
             formatter.locale = NSLocale.current
+            formatter.minimumFractionDigits = 3
+            formatter.maximumFractionDigits = 3
+            return formatter
+        }()
+    }
+    
+    struct dateFormatters {
+        static let iso: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS"
             return formatter
         }()
     }

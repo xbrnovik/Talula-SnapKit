@@ -17,45 +17,37 @@ extension Meteorite {
         return NSFetchRequest<Meteorite>(entityName: "Meteorite")
     }
 
-    @NSManaged public var date: NSDate?
-    @NSManaged public var fall: String?
-    @NSManaged public var geotype: String?
     @NSManaged public var meteoriteId: String?
+    @NSManaged public var name: String?
+    @NSManaged public var geotype: String?
     @NSManaged public var latitude: Double
     @NSManaged public var longitude: Double
-    @NSManaged public var mass: String?
-    @NSManaged public var name: String?
+    @NSManaged public var mass: Float
     
     func update(with jsonDictionary: [String: Any]) throws {
+        //fallen meteorite has its id and location
         guard
-            let fall = jsonDictionary["fall"] as? String,
-            let geolocation = jsonDictionary["geolocation"] as? [String:Any],
-            let geotype = geolocation["type"] as? String,
-            let coordinates = geolocation["coordinates"] as? [Double],
-            let id = jsonDictionary["id"] as? String
+            let id = jsonDictionary["id"] as? String,
+            let latitudeString = jsonDictionary["reclat"] as? String,
+            let latitude = Double(latitudeString),
+            let longitudeString = jsonDictionary["reclong"] as? String,
+            let longitude = Double(longitudeString)
         else {
             throw NSError(domain: "", code: 100, userInfo: nil)
         }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS"
-        
-        self.fall = fall
-        self.geotype = geotype
-        self.longitude = coordinates[0]
-        self.latitude = coordinates[1]
+        //obligatory properties
         self.meteoriteId = id
-        
+        self.longitude = latitude
+        self.latitude = longitude
+        //voluntary properties
         self.name = jsonDictionary["name"] as? String
-        self.mass = jsonDictionary["mass"] as? String
-        if let year = jsonDictionary["year"] as? String {
-            self.date = dateFormatter.date(from: year) as NSDate?
+        self.geotype = jsonDictionary["recclass"] as? String
+        if let mass = jsonDictionary["mass"] as? NSString {
+            self.mass = mass.floatValue
+        } else {
+            self.mass = 0 // considered as unknown
         }
         
-//        print("METEORITE")
-//        print(jsonDictionary.description)
-//        print(self.description)
-//        print(" ")
     }
 
 }
