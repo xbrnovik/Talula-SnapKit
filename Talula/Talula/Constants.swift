@@ -15,6 +15,9 @@ struct Constants {
     struct ui {
         static let masterReusableCellId: String = "masterCell"
         static let bigMargin: CGFloat = 15
+        static let mediumMargin: CGFloat = 10
+        static let smallMargin: CGFloat = 5
+        static let iconSize: CGFloat = 50
     }
     
     struct map {
@@ -32,6 +35,21 @@ struct Constants {
     struct coreData {
         static let entityName: String = "Meteorite"
         static let defaultDescriptorPropertyName: String = "date"
+    }
+    
+    struct fonts {
+        static let titleFont = UIFont.preferredFont(forTextStyle: .headline)
+        static let bodyFont = UIFont.preferredFont(forTextStyle: .body)
+        static let subtitleFont = UIFont.preferredFont(forTextStyle: .footnote)
+    }
+    
+    struct numberFormatters {
+        static let locale: NumberFormatter = {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.locale = NSLocale.current
+            return formatter
+        }()
     }
     
 }

@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view = detailView
-        self.title = "Detail"
+        self.title = "Map"
     }
     
     required init?(coder aDecoder: NSCoder) {

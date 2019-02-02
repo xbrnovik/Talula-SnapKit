@@ -32,7 +32,7 @@ class MasterViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         self.view = masterView
-        self.title = "Master"
+        self.title = "Meteorites"
         
         self.meteoriteStorage = MeteoriteStorage(delegate: self)
         
@@ -70,6 +70,19 @@ extension MasterViewController: NSFetchedResultsControllerDelegate {
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         self.masterView.listView.reloadData()
+//        let tableView = self.masterView.listView
+//        switch type {
+//        case .insert:
+//            tableView.insertRows(at: [newIndexPath!], with: .automatic)
+//        case .delete:
+//            tableView.deleteRows(at: [indexPath!], with: .automatic)
+//        case .move:
+//            tableView.moveRow(at: indexPath!, to: newIndexPath!)
+//        case .update:
+//            tableView.reloadRows(at: [indexPath!], with: .automatic)
+//        default:
+//            tableView.reloadData()
+//        }
     }
     
 }

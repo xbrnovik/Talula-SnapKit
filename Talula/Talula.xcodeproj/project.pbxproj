@@ -17,9 +17,10 @@
 		2321F9D52201B667005A5000 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D42201B667005A5000 /* Constants.swift */; };
 		233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409CB2201A9B90030C269 /* AppDelegate.swift */; };
 		233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409CD2201A9B90030C269 /* DetailViewController.swift */; };
-		233409D32201A9BA0030C269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233409D22201A9BA0030C269 /* Assets.xcassets */; };
 		233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233409D42201A9BA0030C269 /* LaunchScreen.storyboard */; };
 		233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409E02201A9BA0030C269 /* TalulaTests.swift */; };
+		237865972206009D00853EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237865962206009D00853EE3 /* Assets.xcassets */; };
+		2378659B22062E7500853EE3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2378659A22062E7400853EE3 /* README.txt */; };
 		2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6122201D3D7005CDE9D /* AppStarter.swift */; };
 		2384C6152201D944005CDE9D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6142201D944005CDE9D /* DetailView.swift */; };
 		2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6162201E3A2005CDE9D /* Talula.xcdatamodeld */; };
@@ -55,12 +56,13 @@
 		233409C82201A9B90030C269 /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		233409CB2201A9B90030C269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		233409CD2201A9B90030C269 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		233409D22201A9BA0030C269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		233409D52201A9BA0030C269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		233409D72201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		233409DC2201A9BA0030C269 /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		233409E02201A9BA0030C269 /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
 		233409E22201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237865962206009D00853EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2378659A22062E7400853EE3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		2384C6122201D3D7005CDE9D /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
 		2384C6142201D944005CDE9D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2384C6172201E3A2005CDE9D /* Talula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talula.xcdatamodel; sourceTree = "<group>"; };
@@ -119,14 +121,15 @@
 		233409CA2201A9B90030C269 /* Talula */ = {
 			isa = PBXGroup;
 			children = (
+				2378659A22062E7400853EE3 /* README.txt */,
 				233409CB2201A9B90030C269 /* AppDelegate.swift */,
 				23C8D9CE220343FE0000B4FD /* DataSync.swift */,
 				23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */,
 				2384C6122201D3D7005CDE9D /* AppStarter.swift */,
 				2321F9D42201B667005A5000 /* Constants.swift */,
 				2321F9C82201AC61005A5000 /* BaseView.swift */,
-				233409D22201A9BA0030C269 /* Assets.xcassets */,
 				233409D42201A9BA0030C269 /* LaunchScreen.storyboard */,
+				237865962206009D00853EE3 /* Assets.xcassets */,
 				233409D72201A9BA0030C269 /* Info.plist */,
 				2384C6102201CA33005CDE9D /* Master */,
 				2384C6112201CA3D005CDE9D /* Detail */,
@@ -286,8 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2378659B22062E7500853EE3 /* README.txt in Resources */,
+				237865972206009D00853EE3 /* Assets.xcassets in Resources */,
 				233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */,
-				233409D32201A9BA0030C269 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

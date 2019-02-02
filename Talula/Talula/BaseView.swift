@@ -20,7 +20,6 @@ class BaseView: UIView {
         view = UIView(frame: .zero)
         super.init(frame: CGRect.zero)
         self.addSubview(view)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

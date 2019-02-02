@@ -14,8 +14,8 @@ class SourceDataDownloader {
     private let baseURL = URL(string: "https://nasadata-5b34c.firebaseio.com/")! //temporary data on firebase
     
     func getMeteorites(completion: @escaping(_ filmsDict: [[String: Any]]?, _ error: Error?) -> ()) {
-        let filmURL = baseURL.appendingPathComponent("meteorites.json")
-        urlSession.dataTask(with: filmURL) { (data, response, error) in
+        let meteoritesURL = baseURL.appendingPathComponent("meteorites.json")
+        urlSession.dataTask(with: meteoritesURL) { (data, response, error) in
             //not received data
             if let error = error {
                 completion(nil, error)

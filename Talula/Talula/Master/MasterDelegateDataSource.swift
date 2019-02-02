@@ -32,8 +32,25 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell()
+        let meteorite = meteoritesFRC.object(at: indexPath)
         let cell: MasterCell? = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
-        cell?.titleLabel.text = self.meteoritesFRC.object(at: indexPath).name ?? "Unknown name"
+        cell?.titleLabel.text = meteorite.name ?? "Unknown name"
+        
+        if let mass = meteorite.mass,
+            let massDouble = Double(mass),
+            let massNumber = round(massDouble) as NSNumber?,
+            let massString = Constants.numberFormatters.locale.string(from: massNumber) {
+            
+            cell?.subTitleLabel.text = "\(massString) g"
+            cell?.iconImageView.image = massDouble>10000 ? #imageLiteral(resourceName: "meteorite-big_right") : #imageLiteral(resourceName: "meteorite-small_right")
+            
+        } else {
+            
+            cell?.subTitleLabel.text = "Mass unknown"
+            cell?.iconImageView.image = #imageLiteral(resourceName: "iconfinder_iStar_Design_Space_LineIcons_Live-6_3088387-1")
+        }
+        
+        cell?.accessoryType = .disclosureIndicator
         return cell ?? defaultCell
         
     }
@@ -42,7 +59,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

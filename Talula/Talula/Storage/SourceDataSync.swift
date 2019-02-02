@@ -54,7 +54,7 @@ class SourceDataSync {
         var successfull = false
         context.performAndWait {
             
-            let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Meteorite")
+            let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.coreData.entityName)
             let meteoriteIds = dataDictionary.map { $0["id"] as? String }.compactMap { $0 }
             matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId in %@", argumentArray: [meteoriteIds])
             
