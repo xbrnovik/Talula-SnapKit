@@ -21,8 +21,8 @@ struct Constants {
     }
     
     struct map {
-        static let latitudeDelta: CLLocationDegrees = 0.05
-        static let longitudeDelta: CLLocationDegrees = 0.05
+        static let latitudeDelta: CLLocationDegrees = 10
+        static let longitudeDelta: CLLocationDegrees = 10
     }
     
     struct error {
