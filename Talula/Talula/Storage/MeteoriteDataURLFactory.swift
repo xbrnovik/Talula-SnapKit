@@ -21,14 +21,11 @@ class MeteoriteDataURLFactory {
             let dateString = Constants.dateFormatters.iso.string(from: date)
             urlWhere = "&$where=year>=\"2011-01-01T00:00:00\"AND:updated_at>\"" + dateString + "Z\"&fall=Fell"
         } else {
-            
             urlWhere = "&$where=year>=\"2011-01-01T00:00:00\"&fall=Fell"
-            
         }
         
         let urlComplete = urlBase+urlToken+urlWhere+urlSelect
         
-        //let meteoritesURL = URL(string: urlComplete)
         if let urlEscapedString = urlComplete.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) , let escapedURL = URL(string: urlEscapedString) {
             return escapedURL
         } else {
@@ -37,13 +34,4 @@ class MeteoriteDataURLFactory {
         
     }
     
-    class func getFirebaseURL(date: Date?) -> URL? {
-        
-        if let date = date {
-           return URL(string: "https://nasadata-5b34c.firebaseio.com/meteorites4.json")
-        } else {
-           return URL(string: "https://nasadata-5b34c.firebaseio.com/meteorites3.json")
-        }
-        
-    }
 }
