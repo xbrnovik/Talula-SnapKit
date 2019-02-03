@@ -14,7 +14,7 @@ class MeteoriteStorage {
     internal var fetchedResultsController: NSFetchedResultsController<Meteorite>
     internal var managedObjectContext: NSManagedObjectContext
     
-    init(delegate: NSFetchedResultsControllerDelegate) {
+    init(_ delegate: NSFetchedResultsControllerDelegate? = nil) {
         self.managedObjectContext = CoreDataContainer.shared.persistentContainer.viewContext
         
         let fetchRequest: NSFetchRequest<Meteorite> = NSFetchRequest()
@@ -31,6 +31,39 @@ class MeteoriteStorage {
         }
         
         self.fetchedResultsController = aFetchedResultsController
+    }
+    
+    func setExternalContext(context: NSManagedObjectContext) {
+        self.managedObjectContext = context
+    }
+    
+    func getById(id: String) -> Meteorite? {
+        let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.coreData.entityName)
+        matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId = %@", id)
+        matchingMeteoriteRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: false)]
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: matchingMeteoriteRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Fetch error: \(error)")
+            abort()
+        }
+        return fetchedResultsController.fetchedObjects?.first as? Meteorite
+    }
+    
+    func create() -> Meteorite? {
+        return NSEntityDescription.insertNewObject(forEntityName: Constants.coreData.entityName, into: managedObjectContext) as? Meteorite // new objects
+    }
+    
+    func save() {
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save() //save changes
+            } catch let error as NSError {
+                print("Save error: \(error.debugDescription).")
+            }
+            managedObjectContext.reset() // free cache
+        }
     }
     
 }

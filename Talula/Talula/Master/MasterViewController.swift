@@ -32,7 +32,7 @@ class MasterViewController: UIViewController {
         self.view = masterView
         self.title = "Meteorites"
         
-        self.meteoriteStorage = MeteoriteStorage(delegate: self)
+        self.meteoriteStorage = MeteoriteStorage(self)
         
         guard
             let meteoriteStorage = meteoriteStorage

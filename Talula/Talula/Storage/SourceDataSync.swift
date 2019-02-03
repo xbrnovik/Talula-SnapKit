@@ -50,61 +50,48 @@ class SourceDataSync {
         }
     }
     
+    
+    // Pozn pre iOS Lead: Vo vypracovaní nepredpokládam, že by padnuté meteority mohli "odpadnúť/odletieť naspäť". Aktuálne aplikácia ako prvé stiahne všetky záznamy o meteoritoch padnutých po roku 2011. Následne už sťahuje iba tie záznamy databáze, ktorých úprava (aj pridanie) je novšie ako posledná vykonaná aktualizácia. Vďaka tomu aplikácia periodicky sťahuje menšie množstvo dát.
+    // V prípade, žeby sme uvažovali aj možný výmaz z databáze mi napadajú dve možné implementačné riešenia.
+    // 1) Sťahovali by sa vždy všetky záznamy padnutých meteoritov po roku 2011. Následne by sa našlo "id" tých meteoritov, ktoré sa nachádzajú v Core Datach a nie v zdrojovom JSONe - tieto entity by boli vymazané. Ďalej by pracovala aplikácia rovnako ako teraz, t.j. existujúce záznamy na základe "id" by aktualizovala, neexistujúce vytvorila.
+    //2) Sťahovali by sa 2x JSON súbory. Prvý by bol to isté riešenie čo teraz. Druhý by obsahoval čisto "id" hodnoty všetkých meteoritov padnutých po roku 2011. Tieto "id" hodnoty by boli porovnané s entitami v Core Datách a rovnako ako v (1) zmazané. Ušetrilo by sa množstvo sťahovaných údajov, ale za cenu zložitejšieho zdrojového kódu a 2 requestov.
+    //Aktuálne si myslím, žeby obidve riešenia sťahovali väčšie množstvo dát ako súčasné a tiež si myslím, že taká situácia v tomto prípade nenastane, ale je to na diskusiu, každý môže mať iný názor.
+    
     private func syncMeteorites(dataDictionary: [[String: Any]], context: NSManagedObjectContext) -> Bool {
         var successfull = false
+        let storage = MeteoriteStorage()
+        storage.setExternalContext(context: context)
+        
         context.performAndWait {
-            
-            //let meteoriteIds = dataDictionary.map { $0["id"] as? String }.compactMap { $0 }
-            //matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId in %@", argumentArray: [meteoriteIds])
             
             for meteoriteDictionary in dataDictionary { //new data
                 
                 let meteorite: Meteorite?
                 let id = meteoriteDictionary["id"] as! String
                 
-                if let meteoriteObject = self.getById(context: context, id: id) {
-                    //old
+                if let meteoriteObject = storage.getById(id: id) {
+                    // existing object
                     meteorite = meteoriteObject
                 } else {
-                    //new
-                    meteorite = NSEntityDescription.insertNewObject(forEntityName: "Meteorite", into: context) as? Meteorite // new objects
+                    //new object
+                    meteorite = storage.create()
                 }
                 
                 do {
-                    try meteorite!.update(with: meteoriteDictionary) //set properties
+                    try meteorite?.update(with: meteoriteDictionary) //set properties
                 } catch let error as NSError{
                     print("Update error: \(error.debugDescription).")
                     context.delete(meteorite!)
                 }
-                
-                
+               
             }
             
-            if context.hasChanges {
-                do {
-                    try context.save() //save changes
-                } catch let error as NSError {
-                    print("Save error: \(error.debugDescription).")
-                }
-                context.reset() // free cache
-            }
+            storage.save()
             successfull = true
         }
         return successfull
     }
     
     
-    func getById(context: NSManagedObjectContext, id: String) -> Meteorite? {
-        let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.coreData.entityName)
-        matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId = %@", id)
-        matchingMeteoriteRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: false)]
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: matchingMeteoriteRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        do {
-            try fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Fetch error: \(error)")
-            abort()
-        }
-        return fetchedResultsController.fetchedObjects?.first as? Meteorite
-    }
+    
 }
