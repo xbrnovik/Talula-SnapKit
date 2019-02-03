@@ -24,28 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        //
-    }
-
     func applicationDidEnterBackground(_ application: UIApplication) {
         application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         self.dataSync?.backgroundRun(completionHandler)
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        //
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        //
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        //
     }
 
 }

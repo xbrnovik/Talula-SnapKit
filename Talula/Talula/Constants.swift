@@ -21,6 +21,7 @@ struct Constants {
         static let miniIconSize: CGFloat = 30
         static let bigCell: CGFloat = 80
         static let smallCell: CGFloat = 40
+        static let footerHeight: CGFloat = 80
     }
     
     struct map {

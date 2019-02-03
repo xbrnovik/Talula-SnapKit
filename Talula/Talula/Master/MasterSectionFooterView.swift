@@ -28,13 +28,6 @@ class MasterSectionFooterView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.addSubview(titleLabel)
-        self.setNeedsUpdateConstraints()
-    }
-    
-    init() {
-        super.init(frame: .zero)
         self.addSubview(separatorView)
         self.addSubview(titleLabel)
         self.setNeedsUpdateConstraints()
@@ -56,8 +49,8 @@ class MasterSectionFooterView: UIView {
             })
             
             titleLabel.snp.makeConstraints({ (make) in
-                make.top.equalTo(separatorView).offset(15)
-                make.left.right.bottom.equalToSuperview()
+                make.top.equalTo(separatorView).offset(10)
+                make.left.right.equalToSuperview()
             })
             
             didSetupConstraints = true
