@@ -21,16 +21,12 @@ class MasterViewController: UIViewController {
     
     var masterDelegateDataSource: MasterDelegateDataSource? = nil
     var meteoriteStorage: MeteoriteStorage? = nil
-    let detailViewConstroller: DetailViewController
-    let informationController: InformationViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     init() {
-        self.detailViewConstroller = DetailViewController()
-        self.informationController = InformationViewController()
         super.init(nibName: nil, bundle: nil)
         
         self.view = masterView
@@ -67,11 +63,13 @@ class MasterViewController: UIViewController {
     }
     
     func presentDetail(meteorite: Meteorite) {
+        let detailViewConstroller = DetailViewController()
         detailViewConstroller.setModel(meteorite)
         self.navigationController?.pushViewController(detailViewConstroller, animated: true)
     }
     
     @objc func presentInformation() {
+        let informationController = InformationViewController()
         self.navigationController?.pushViewController(informationController, animated: true)
     }
     

@@ -33,13 +33,6 @@ class DetailViewController: UIViewController {
     }
     
     func setModel(_ meteorite: Meteorite) {
-        
-        // Delete old annotations.
-        if detailView.mapView.annotations.count > 0 {
-            let oldAnnotations = detailView.mapView.annotations
-            detailView.mapView.removeAnnotations(oldAnnotations)
-        }
-        
         // Define map data
         let latitude: CLLocationDegrees = meteorite.latitude
         let longitude: CLLocationDegrees = meteorite.longitude
@@ -55,6 +48,14 @@ class DetailViewController: UIViewController {
         detailView.mapView.addAnnotation(newAnnotation)
         detailView.mapView.setRegion(region, animated: true)
         
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Delete old annotations.
+        if detailView.mapView.annotations.count > 0 {
+            let oldAnnotations = detailView.mapView.annotations
+            detailView.mapView.removeAnnotations(oldAnnotations)
+        }
     }
 
 }
