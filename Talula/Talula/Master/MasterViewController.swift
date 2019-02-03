@@ -78,21 +78,21 @@ class MasterViewController: UIViewController {
 
 extension MasterViewController: NSFetchedResultsControllerDelegate {
     
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        self.masterView.listView.reloadData()
-//        let tableView = self.masterView.listView
-//        switch type {
-//        case .insert:
-//            tableView.insertRows(at: [newIndexPath!], with: .automatic)
-//        case .delete:
-//            tableView.deleteRows(at: [indexPath!], with: .automatic)
-//        case .move:
-//            tableView.moveRow(at: indexPath!, to: newIndexPath!)
-//        case .update:
-//            tableView.reloadRows(at: [indexPath!], with: .automatic)
-//        default:
-//            tableView.reloadData()
-//        }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        DispatchQueue.main.async { [weak self] in
+            if let self = self {
+                self.setAnimation(for: self.masterView.listView)
+                self.masterView.listView.reloadData()
+            }
+        }
+    }
+    
+    private func setAnimation(for view: UIView) {
+        let transition = CATransition()
+        transition.duration = 0.4
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        transition.type = .fade
+        view.layer.add(transition, forKey: nil)
     }
     
 }

@@ -137,9 +137,9 @@
 			children = (
 				2378659A22062E7400853EE3 /* README.txt */,
 				233409CB2201A9B90030C269 /* AppDelegate.swift */,
+				2384C6122201D3D7005CDE9D /* AppStarter.swift */,
 				23C8D9CE220343FE0000B4FD /* DataSync.swift */,
 				23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */,
-				2384C6122201D3D7005CDE9D /* AppStarter.swift */,
 				2321F9D42201B667005A5000 /* Constants.swift */,
 				2321F9C82201AC61005A5000 /* BaseView.swift */,
 				233409D42201A9BA0030C269 /* LaunchScreen.storyboard */,

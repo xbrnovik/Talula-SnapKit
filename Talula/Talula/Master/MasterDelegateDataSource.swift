@@ -63,6 +63,8 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    // MARK: - FooterViewDelegate
+    
     func willDisplayFooterView() -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: Constants.ui.footerHeight)
         let footer = MasterSectionFooterView(frame: frame)
