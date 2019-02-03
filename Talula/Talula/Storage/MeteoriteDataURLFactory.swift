@@ -19,43 +19,31 @@ class MeteoriteDataURLFactory {
         
         if let date = date {
             let dateString = Constants.dateFormatters.iso.string(from: date)
-            urlWhere = "&$where=year%3E=%222011-01-01T00:00:00%22AND:updated_at%3E%22" + dateString + "Z%22&fall=Fell"
+            urlWhere = "&$where=year>=\"2011-01-01T00:00:00\"AND:updated_at>\"" + dateString + "Z\"&fall=Fell"
         } else {
             
-            urlWhere = "&$where=year%3E=%222011-01-01T00:00:00%22&fall=Fell"
+            urlWhere = "&$where=year>=\"2011-01-01T00:00:00\"&fall=Fell"
             
         }
         
         let urlComplete = urlBase+urlToken+urlWhere+urlSelect
-        //let meteoritesURL = urlComplete.getCleanedURL()
-        let meteoritesURL = URL(string: urlComplete)
         
-        return meteoritesURL
+        //let meteoritesURL = URL(string: urlComplete)
+        if let urlEscapedString = urlComplete.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) , let escapedURL = URL(string: urlEscapedString) {
+            return escapedURL
+        } else {
+            return nil
+        }
+        
     }
     
     class func getFirebaseURL(date: Date?) -> URL? {
         
         if let date = date {
-            return URL(string: "https://nasadata-5b34c.firebaseio.com/meteorites4.json")
+           return URL(string: "https://nasadata-5b34c.firebaseio.com/meteorites4.json")
         } else {
            return URL(string: "https://nasadata-5b34c.firebaseio.com/meteorites3.json")
         }
         
-    }
-}
-
-extension String {
-    func getCleanedURL() -> URL? {
-        guard self.isEmpty == false else {
-            return nil
-        }
-        if let url = URL(string: self) {
-            return url
-        } else {
-            if let urlEscapedString = self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) , let escapedURL = URL(string: urlEscapedString){
-                return escapedURL
-            }
-        }
-        return nil
     }
 }
