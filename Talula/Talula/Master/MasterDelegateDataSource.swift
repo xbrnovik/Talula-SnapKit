@@ -39,14 +39,18 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         
         if let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?, let massString = Constants.numberFormatters.locale.string(from: massNumber), massNumber != 0 {
             cell?.subTitleLabel.text = "\(massString) g"
-            cell?.iconImageView.image = meteorite.mass>10000 ? #imageLiteral(resourceName: "BigMeteorite") : #imageLiteral(resourceName: "SmaillMeteorite")
+            if meteorite.mass >= 10000 {
+                cell?.iconImageView.image = #imageLiteral(resourceName: "BigMeteorite")
+            } else if meteorite.mass >= 1000 {
+                cell?.iconImageView.image = #imageLiteral(resourceName: "SmaillMeteorite")
+            } else {
+                cell?.iconImageView.image = #imageLiteral(resourceName: "OtherMeteorite")
+            }
         } else {
             cell?.subTitleLabel.text = "Mass unknown"
-            cell?.iconImageView.image = #imageLiteral(resourceName: "OtherMeteorite")
         }
         
         cell?.accessoryType = .disclosureIndicator
-        print(meteorite.geotype?.description)
         return cell ?? defaultCell
         
     }

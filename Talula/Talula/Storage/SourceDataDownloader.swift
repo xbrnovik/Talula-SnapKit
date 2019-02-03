@@ -13,7 +13,7 @@ class SourceDataDownloader {
     private let urlSession = URLSession.shared
     
     func getMeteorites(all:Bool, completion: @escaping(_ filmsDict: [[String: Any]]?, _ error: Error?) -> ()) {
-        let url = all ? MeteoriteDataURLFactory.getURL(date: nil) :  MeteoriteDataURLFactory.getURL(date: Date()) //TODO
+        let url = all ? MeteoriteDataURLFactory.getURL(date: nil) :  MeteoriteDataURLFactory.getURL(date: Date())
         
         //Checks is defined URL of session.
         guard

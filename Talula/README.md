@@ -1,3 +1,6 @@
+*** Pozn. pre iOS Lead-a ***
+
+
 Safearea guidelines - Snapkit:
 
 if #available(iOS 11, *) {

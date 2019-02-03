@@ -47,7 +47,6 @@ class MasterViewController: UIViewController {
             self?.presentDetail(meteorite: meteorite)
         }
         
-        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(presentInformation))
         let infoButton = UIButton(type: .infoLight)
         infoButton.addTarget(self, action: #selector(presentInformation), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: infoButton)

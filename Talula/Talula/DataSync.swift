@@ -12,6 +12,7 @@ import UIKit
 class DataSync {
     
     internal var timestampKey = "updateTimestamp"
+    internal var updateDelay = 86400
     
     func backgroundRun(_ completionHandler: @escaping (UIBackgroundFetchResult) -> ()) {
         if needsUpdateData() {
@@ -51,7 +52,9 @@ class DataSync {
         //If updateTimestamp is not set, UserDefaults return 0.
         let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey)
         let currentTimestamp = Int(Date().timeIntervalSince1970)
-        if updateTimestamp >= currentTimestamp { //TODO: Add to calculation one day difference (24*60*60 = 86400 seconds).
+        //Adds to calculation one day difference (24*60*60 = 86400 seconds).
+        let calculatedTimestamp = currentTimestamp+updateTimestamp
+        if updateTimestamp >= calculatedTimestamp {
             result = false
         }
         return result

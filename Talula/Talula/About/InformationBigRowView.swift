@@ -22,7 +22,9 @@ class InformationBigRowView: BaseView {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 2
+        label.adjustsFontSizeToFitWidth = false
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
 
