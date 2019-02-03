@@ -58,11 +58,13 @@ class MeteoriteStorage {
     func save() {
         if managedObjectContext.hasChanges {
             do {
-                try managedObjectContext.save() //save changes
+                // Saves changes.
+                try managedObjectContext.save()
             } catch let error as NSError {
                 print("Save error: \(error.debugDescription).")
             }
-            managedObjectContext.reset() // free cache
+            // Frees cache.
+            managedObjectContext.reset()
         }
     }
     

@@ -48,7 +48,8 @@ class DataSync {
     
     private func needsUpdateData() -> Bool {
         var result = true
-        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey) //If updateTimestamp is not set, UserDefaults return 0.
+        //If updateTimestamp is not set, UserDefaults return 0.
+        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey)
         let currentTimestamp = Int(Date().timeIntervalSince1970)
         if updateTimestamp >= currentTimestamp { //TODO: Add to calculation one day difference (24*60*60 = 86400 seconds).
             result = false
@@ -58,7 +59,8 @@ class DataSync {
     
     private func needsDownloadAllData() -> Bool {
         var result = false
-        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey) //If updateTimestamp is not set, UserDefaults return 0.
+        //If updateTimestamp is not set, UserDefaults return 0.
+        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey)
         if updateTimestamp == 0 {
             result = true
         }

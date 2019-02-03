@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appStarter = AppStarter()
         // Starts data download if necessary.
         self.dataSync = DataSync()
-        self.dataSync?.foregroundRun() //on first launch is not called "applicationWillEnterForeground"
+        //On the first launch is not called "applicationWillEnterForeground".
+        self.dataSync?.foregroundRun()
         return true
     }
 

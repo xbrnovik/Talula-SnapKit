@@ -34,6 +34,7 @@ struct Constants {
         static let emptyReceivedData = 101
         static let incorrectDataFormat = 102
         static let syncFailure = 103
+        static let wrongURLFormat = 104
     }
     
     struct coreData {

@@ -25,7 +25,7 @@ extension Meteorite {
     @NSManaged public var mass: Float
     
     func update(with jsonDictionary: [String: Any]) throws {
-        //fallen meteorite has its id and location
+        // Checks meteorite attributes - fallen meteorite has its ID and location.
         guard
             let id = jsonDictionary["id"] as? String,
             let latitudeString = jsonDictionary["reclat"] as? String,
@@ -35,17 +35,18 @@ extension Meteorite {
         else {
             throw NSError(domain: "", code: 100, userInfo: nil)
         }
-        //obligatory properties
+        //Sets obligatory attributes.
         self.meteoriteId = id
         self.longitude = latitude
         self.latitude = longitude
-        //voluntary properties
+        //Sets voluntary attributes.
         self.name = jsonDictionary["name"] as? String
         self.geotype = jsonDictionary["recclass"] as? String
         if let mass = jsonDictionary["mass"] as? NSString {
             self.mass = mass.floatValue
         } else {
-            self.mass = 0 // considered as unknown
+            // Float value cannot be nil, as well as mass of meteorite should not be 0 g - zero value is considered as unknown.
+            self.mass = 0
         }
         
     }

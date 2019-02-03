@@ -17,11 +17,6 @@ class DetailViewController: UIViewController {
         return view
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view = detailView
@@ -33,14 +28,14 @@ class DetailViewController: UIViewController {
     }
     
     func setModel(_ meteorite: Meteorite) {
-        // Define map data
+        // Defines map data.
         let latitude: CLLocationDegrees = meteorite.latitude
         let longitude: CLLocationDegrees = meteorite.longitude
         let location = CLLocationCoordinate2DMake(latitude, longitude)
         let span = MKCoordinateSpan(latitudeDelta: Constants.map.latitudeDelta, longitudeDelta: Constants.map.longitudeDelta)
         let region = MKCoordinateRegion(center: location, span: span)
         
-        // Create new annotation and set region
+        // Creates new annotation and set region.
         let newAnnotation = MKPointAnnotation()
         newAnnotation.title = meteorite.name
         newAnnotation.coordinate = location
@@ -51,7 +46,7 @@ class DetailViewController: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // Delete old annotations.
+        // Deletes old annotations.
         if detailView.mapView.annotations.count > 0 {
             let oldAnnotations = detailView.mapView.annotations
             detailView.mapView.removeAnnotations(oldAnnotations)
