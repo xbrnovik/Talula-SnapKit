@@ -1,0 +1,10 @@
+*** Icon sources ***
+
+Icon logo: https://icons8.com/icon/set/moon/cotton
+
+Small meteorite: https://www.flaticon.com/free-icon/meteorite_145223#term=meteorite&page=1&position=19
+Big meteorite: https://www.flaticon.com/free-icon/meteorite_533026#term=meteorite&page=1&position=87
+Uknown meteorite: https://www.flaticon.com/free-icon/asteroid_768456#term=meteorite&page=1&position=63
+
+Gmail: https://www.flaticon.com/free-icon/gmail_300228#term=gmail&page=1&position=9
+LinkedIn: https://www.flaticon.com/free-icon/linkedin_174857

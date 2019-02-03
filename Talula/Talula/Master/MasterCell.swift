@@ -15,7 +15,7 @@ class MasterCell: UITableViewCell {
     
     let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "meteorite-small_right")
+        imageView.image = #imageLiteral(resourceName: "OtherMeteorite")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

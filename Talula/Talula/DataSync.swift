@@ -1,5 +1,5 @@
 //
-//  BackgroundSync.swift
+//  DataSync.swift
 //  Talula
 //
 //  Created by Diana Brnovik on 31/01/2019.

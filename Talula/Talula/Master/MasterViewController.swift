@@ -22,6 +22,7 @@ class MasterViewController: UIViewController {
     var masterDelegateDataSource: MasterDelegateDataSource? = nil
     var meteoriteStorage: MeteoriteStorage? = nil
     let detailViewConstroller: DetailViewController
+    let informationController: InformationViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class MasterViewController: UIViewController {
     
     init() {
         self.detailViewConstroller = DetailViewController()
+        self.informationController = InformationViewController()
         super.init(nibName: nil, bundle: nil)
         
         self.view = masterView
@@ -49,6 +51,11 @@ class MasterViewController: UIViewController {
             self?.presentDetail(meteorite: meteorite)
         }
         
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(presentInformation))
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(presentInformation), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: infoButton)
+        self.navigationItem.rightBarButtonItem = barButton
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -62,6 +69,10 @@ class MasterViewController: UIViewController {
     func presentDetail(meteorite: Meteorite) {
         detailViewConstroller.setModel(meteorite)
         self.navigationController?.pushViewController(detailViewConstroller, animated: true)
+    }
+    
+    @objc func presentInformation() {
+        self.navigationController?.pushViewController(informationController, animated: true)
     }
     
 }

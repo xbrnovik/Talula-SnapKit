@@ -21,6 +21,13 @@
 		233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409E02201A9BA0030C269 /* TalulaTests.swift */; };
 		237865972206009D00853EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237865962206009D00853EE3 /* Assets.xcassets */; };
 		2378659B22062E7500853EE3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2378659A22062E7400853EE3 /* README.txt */; };
+		2378659F22065E7000853EE3 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378659E22065E7000853EE3 /* InformationViewController.swift */; };
+		237865A122065E7F00853EE3 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A022065E7F00853EE3 /* InformationView.swift */; };
+		237865A422065FA700853EE3 /* InformationBigRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A322065FA700853EE3 /* InformationBigRowView.swift */; };
+		237865A62206621800853EE3 /* InformationIconsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A52206621800853EE3 /* InformationIconsStackView.swift */; };
+		237865A82206622700853EE3 /* InformationContactStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A72206622700853EE3 /* InformationContactStackView.swift */; };
+		237865AA22066AC800853EE3 /* MasterSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A922066AC800853EE3 /* MasterSectionFooterView.swift */; };
+		237865AC220671EE00853EE3 /* InformationSmallRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865AB220671EE00853EE3 /* InformationSmallRowView.swift */; };
 		2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6122201D3D7005CDE9D /* AppStarter.swift */; };
 		2384C6152201D944005CDE9D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6142201D944005CDE9D /* DetailView.swift */; };
 		2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6162201E3A2005CDE9D /* Talula.xcdatamodeld */; };
@@ -63,6 +70,13 @@
 		233409E22201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237865962206009D00853EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2378659A22062E7400853EE3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
+		2378659E22065E7000853EE3 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		237865A022065E7F00853EE3 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		237865A322065FA700853EE3 /* InformationBigRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBigRowView.swift; sourceTree = "<group>"; };
+		237865A52206621800853EE3 /* InformationIconsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationIconsStackView.swift; sourceTree = "<group>"; };
+		237865A72206622700853EE3 /* InformationContactStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationContactStackView.swift; sourceTree = "<group>"; };
+		237865A922066AC800853EE3 /* MasterSectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSectionFooterView.swift; sourceTree = "<group>"; };
+		237865AB220671EE00853EE3 /* InformationSmallRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationSmallRowView.swift; sourceTree = "<group>"; };
 		2384C6122201D3D7005CDE9D /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
 		2384C6142201D944005CDE9D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2384C6172201E3A2005CDE9D /* Talula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talula.xcdatamodel; sourceTree = "<group>"; };
@@ -133,6 +147,7 @@
 				233409D72201A9BA0030C269 /* Info.plist */,
 				2384C6102201CA33005CDE9D /* Master */,
 				2384C6112201CA3D005CDE9D /* Detail */,
+				237865A222065E8A00853EE3 /* About */,
 				2384C61F2201E528005CDE9D /* Storage */,
 			);
 			path = Talula;
@@ -147,12 +162,26 @@
 			path = TalulaTests;
 			sourceTree = "<group>";
 		};
+		237865A222065E8A00853EE3 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				2378659E22065E7000853EE3 /* InformationViewController.swift */,
+				237865A022065E7F00853EE3 /* InformationView.swift */,
+				237865A52206621800853EE3 /* InformationIconsStackView.swift */,
+				237865A72206622700853EE3 /* InformationContactStackView.swift */,
+				237865A322065FA700853EE3 /* InformationBigRowView.swift */,
+				237865AB220671EE00853EE3 /* InformationSmallRowView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		2384C6102201CA33005CDE9D /* Master */ = {
 			isa = PBXGroup;
 			children = (
 				2321F9CC2201ACAC005A5000 /* MasterViewController.swift */,
 				2321F9CE2201B00E005A5000 /* MasterView.swift */,
 				2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */,
+				237865A922066AC800853EE3 /* MasterSectionFooterView.swift */,
 				2321F9D22201B2FF005A5000 /* MasterCell.swift */,
 			);
 			path = Master;
@@ -378,23 +407,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237865AC220671EE00853EE3 /* InformationSmallRowView.swift in Sources */,
 				23C8D9CF220343FE0000B4FD /* DataSync.swift in Sources */,
 				23C8D9CD220246DE0000B4FD /* CoreDataContainer.swift in Sources */,
 				2321F9CD2201ACAC005A5000 /* MasterViewController.swift in Sources */,
 				2384C61A2201E42F005CDE9D /* MeteoriteStorage.swift in Sources */,
 				2321F9C92201AC61005A5000 /* BaseView.swift in Sources */,
+				237865A122065E7F00853EE3 /* InformationView.swift in Sources */,
 				2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */,
 				2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */,
+				237865A82206622700853EE3 /* InformationContactStackView.swift in Sources */,
 				233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */,
 				23C8D9C9220225780000B4FD /* SourceDataDownloader.swift in Sources */,
 				23C8D9CB220226C30000B4FD /* SourceDataSync.swift in Sources */,
 				2321F9CF2201B00E005A5000 /* MasterView.swift in Sources */,
 				2384C6152201D944005CDE9D /* DetailView.swift in Sources */,
+				2378659F22065E7000853EE3 /* InformationViewController.swift in Sources */,
 				2304FA102201EC8000285E27 /* Meteorite+CoreDataProperties.swift in Sources */,
 				2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */,
 				2304FA0F2201EC8000285E27 /* Meteorite+CoreDataClass.swift in Sources */,
 				233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */,
+				237865AA22066AC800853EE3 /* MasterSectionFooterView.swift in Sources */,
+				237865A422065FA700853EE3 /* InformationBigRowView.swift in Sources */,
 				2321F9D12201B0A2005A5000 /* MasterDelegateDataSource.swift in Sources */,
+				237865A62206621800853EE3 /* InformationIconsStackView.swift in Sources */,
 				2321F9D52201B667005A5000 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

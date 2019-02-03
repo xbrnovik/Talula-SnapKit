@@ -38,10 +38,10 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         
         if let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?, let massString = Constants.numberFormatters.locale.string(from: massNumber), massNumber != 0 {
             cell?.subTitleLabel.text = "\(massString) g"
-            cell?.iconImageView.image = meteorite.mass>10000 ? #imageLiteral(resourceName: "meteorite-big_right") : #imageLiteral(resourceName: "meteorite-small_right")
+            cell?.iconImageView.image = meteorite.mass>10000 ? #imageLiteral(resourceName: "BigMeteorite") : #imageLiteral(resourceName: "SmaillMeteorite")
         } else {
             cell?.subTitleLabel.text = "Mass unknown"
-            cell?.iconImageView.image = #imageLiteral(resourceName: "iconfinder_iStar_Design_Space_LineIcons_Live-6_3088387-1")
+            cell?.iconImageView.image = #imageLiteral(resourceName: "OtherMeteorite")
         }
         
         cell?.accessoryType = .disclosureIndicator
@@ -54,13 +54,27 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return Constants.ui.bigCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMeteorite = self.meteoritesFRC.object(at: indexPath)
         presentDetailHandler?(selectedMeteorite)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = MasterSectionFooterView()
+        if let count = self.meteoritesFRC.fetchedObjects?.count {
+            footer.titleLabel.text = "\(count) meteorite(s)"
+        } else {
+            footer.titleLabel.text = "Unknown count of meteorites"
+        }
+        return footer
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 30
     }
     
 }
