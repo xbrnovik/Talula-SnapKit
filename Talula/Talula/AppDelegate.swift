@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appStarter = AppStarter()
         // Starts data download if necessary.
         self.dataSync = DataSync()
-        self.dataSync?.foregroundRun()
+        self.dataSync?.foregroundRun() //on first launch is not called "applicationWillEnterForeground"
         return true
     }
 
@@ -30,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         self.dataSync?.backgroundRun(completionHandler)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        self.dataSync?.foregroundRun()
     }
 
 }

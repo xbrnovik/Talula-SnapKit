@@ -43,7 +43,6 @@ class MasterViewController: UIViewController {
         masterDelegateDataSource = MasterDelegateDataSource(meteoritesFRC: meteoriteStorage.fetchedResultsController)
         masterView.listView.delegate = masterDelegateDataSource
         masterView.listView.dataSource = masterDelegateDataSource
-        masterView.delegate = masterDelegateDataSource
         masterDelegateDataSource?.presentDetailHandler = { [weak self] (meteorite) in
             self?.presentDetail(meteorite: meteorite)
         }

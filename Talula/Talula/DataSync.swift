@@ -15,7 +15,8 @@ class DataSync {
     
     func backgroundRun(_ completionHandler: @escaping (UIBackgroundFetchResult) -> ()) {
         if needsUpdateData() {
-            SourceDataSync().fetchMeteorites(completion: { (error) in
+            let all = needsDownloadAllData()
+            SourceDataSync().fetchMeteorites(all: all) { (error) in
                 if let error = error {
                     print("Fetch error: \(error)")
                     completionHandler(.failed)
@@ -23,19 +24,20 @@ class DataSync {
                     completionHandler(.newData)
                     self.setLastUpdated()
                 }
-            })
+            }
         }
     }
     
     func foregroundRun() {
         if needsUpdateData() {
-            SourceDataSync().fetchMeteorites(completion: { (error) in
+            let all = needsDownloadAllData()
+            SourceDataSync().fetchMeteorites(all: all) { (error) in
                 if let error = error {
                     print("Fetch error: \(error)")
                 } else {
                     self.setLastUpdated()
                 }
-            })
+            }
         }
     }
     
@@ -50,6 +52,15 @@ class DataSync {
         let currentTimestamp = Int(Date().timeIntervalSince1970)
         if updateTimestamp >= currentTimestamp { //TODO: Add to calculation one day difference (24*60*60 = 86400 seconds).
             result = false
+        }
+        return result
+    }
+    
+    private func needsDownloadAllData() -> Bool {
+        var result = false
+        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey) //If updateTimestamp is not set, UserDefaults return 0.
+        if updateTimestamp == 0 {
+            result = true
         }
         return result
     }

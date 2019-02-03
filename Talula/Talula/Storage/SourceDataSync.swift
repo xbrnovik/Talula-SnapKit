@@ -19,8 +19,8 @@ class SourceDataSync {
         self.downloader = SourceDataDownloader()
     }
     
-    func fetchMeteorites(completion: @escaping(Error?) -> Void) {
-        downloader.getMeteorites() { dataDictionary, error in
+    func fetchMeteorites(all:Bool, completion: @escaping(Error?) -> Void) {
+        downloader.getMeteorites(all: all) { dataDictionary, error in
             if let error = error {
                 completion(error)
                 return
@@ -54,39 +54,30 @@ class SourceDataSync {
         var successfull = false
         context.performAndWait {
             
-            let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.coreData.entityName)
-            let meteoriteIds = dataDictionary.map { $0["id"] as? String }.compactMap { $0 }
-            matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId in %@", argumentArray: [meteoriteIds])
-            
-            let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: matchingMeteoriteRequest) // batch delete and merge
-            batchDeleteRequest.resultType = .resultTypeObjectIDs
-            
-            do {
-                let batchDeleteResult = try context.execute(batchDeleteRequest) as? NSBatchDeleteResult
-                
-                if let deletedObjectIDs = batchDeleteResult?.result as? [NSManagedObjectID] {
-                    NSManagedObjectContext.mergeChanges(fromRemoteContextSave: [NSDeletedObjectsKey: deletedObjectIDs], into: [self.persistentContainer.viewContext]) //merge (updates)
-                }
-            } catch let error as NSError {
-                print("Batch delete error: \(error.debugDescription).")
-                return
-            }
+            //let meteoriteIds = dataDictionary.map { $0["id"] as? String }.compactMap { $0 }
+            //matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId in %@", argumentArray: [meteoriteIds])
             
             for meteoriteDictionary in dataDictionary { //new data
                 
-                guard
-                    let meteorite = NSEntityDescription.insertNewObject(forEntityName: "Meteorite", into: context) as? Meteorite // new objects
-                else {
-                    print("Insert error: Failed to create new object.")
-                    return
+                let meteorite: Meteorite?
+                let id = meteoriteDictionary["id"] as! String
+                
+                if let meteoriteObject = self.getById(context: context, id: id) {
+                    //old
+                    meteorite = meteoriteObject
+                } else {
+                    //new
+                    meteorite = NSEntityDescription.insertNewObject(forEntityName: "Meteorite", into: context) as? Meteorite // new objects
                 }
                 
                 do {
-                    try meteorite.update(with: meteoriteDictionary) //set properties
+                    try meteorite!.update(with: meteoriteDictionary) //set properties
                 } catch let error as NSError{
                     print("Update error: \(error.debugDescription).")
-                    context.delete(meteorite)
+                    context.delete(meteorite!)
                 }
+                
+                
             }
             
             if context.hasChanges {
@@ -100,5 +91,20 @@ class SourceDataSync {
             successfull = true
         }
         return successfull
+    }
+    
+    
+    func getById(context: NSManagedObjectContext, id: String) -> Meteorite? {
+        let matchingMeteoriteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.coreData.entityName)
+        matchingMeteoriteRequest.predicate = NSPredicate(format: "meteoriteId = %@", id)
+        matchingMeteoriteRequest.sortDescriptors = [NSSortDescriptor(key: Constants.coreData.defaultDescriptorPropertyName, ascending: false)]
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: matchingMeteoriteRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Fetch error: \(error)")
+            abort()
+        }
+        return fetchedResultsController.fetchedObjects?.first as? Meteorite
     }
 }

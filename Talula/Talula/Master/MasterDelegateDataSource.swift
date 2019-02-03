@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDelegate, FooterViewDelegate {
+class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     private var meteoritesFRC: NSFetchedResultsController<Meteorite>
     
@@ -23,6 +23,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        displayFooterView(tableView)
         return 1
     }
     
@@ -63,9 +64,9 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    // MARK: - FooterViewDelegate
+    // MARK: -
     
-    func willDisplayFooterView() -> UIView? {
+    func displayFooterView(_ tableView: UITableView) {
         let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: Constants.ui.footerHeight)
         let footer = MasterSectionFooterView(frame: frame)
         if let count = self.meteoritesFRC.fetchedObjects?.count {
@@ -74,7 +75,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         } else {
             footer.titleLabel.text = "Unknown count of meteorites"
         }
-        return footer
+        tableView.tableFooterView = footer
     }
     
 }

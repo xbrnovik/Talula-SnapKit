@@ -28,6 +28,7 @@
 		237865A82206622700853EE3 /* InformationContactStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A72206622700853EE3 /* InformationContactStackView.swift */; };
 		237865AA22066AC800853EE3 /* MasterSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A922066AC800853EE3 /* MasterSectionFooterView.swift */; };
 		237865AC220671EE00853EE3 /* InformationSmallRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865AB220671EE00853EE3 /* InformationSmallRowView.swift */; };
+		237865B02207384A00853EE3 /* MeteoriteDataURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865AF2207384A00853EE3 /* MeteoriteDataURLFactory.swift */; };
 		2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6122201D3D7005CDE9D /* AppStarter.swift */; };
 		2384C6152201D944005CDE9D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6142201D944005CDE9D /* DetailView.swift */; };
 		2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6162201E3A2005CDE9D /* Talula.xcdatamodeld */; };
@@ -77,6 +78,7 @@
 		237865A72206622700853EE3 /* InformationContactStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationContactStackView.swift; sourceTree = "<group>"; };
 		237865A922066AC800853EE3 /* MasterSectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSectionFooterView.swift; sourceTree = "<group>"; };
 		237865AB220671EE00853EE3 /* InformationSmallRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationSmallRowView.swift; sourceTree = "<group>"; };
+		237865AF2207384A00853EE3 /* MeteoriteDataURLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteDataURLFactory.swift; sourceTree = "<group>"; };
 		2384C6122201D3D7005CDE9D /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
 		2384C6142201D944005CDE9D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2384C6172201E3A2005CDE9D /* Talula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talula.xcdatamodel; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				2384C6192201E42F005CDE9D /* MeteoriteStorage.swift */,
 				23C8D9CA220226C30000B4FD /* SourceDataSync.swift */,
 				23C8D9C8220225780000B4FD /* SourceDataDownloader.swift */,
+				237865AF2207384A00853EE3 /* MeteoriteDataURLFactory.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				237865A122065E7F00853EE3 /* InformationView.swift in Sources */,
 				2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */,
 				2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */,
+				237865B02207384A00853EE3 /* MeteoriteDataURLFactory.swift in Sources */,
 				237865A82206622700853EE3 /* InformationContactStackView.swift in Sources */,
 				233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */,
 				23C8D9C9220225780000B4FD /* SourceDataDownloader.swift in Sources */,

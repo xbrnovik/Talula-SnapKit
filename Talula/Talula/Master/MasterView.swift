@@ -9,14 +9,9 @@
 import Foundation
 import UIKit
 
-protocol FooterViewDelegate: class {
-    func willDisplayFooterView() -> UIView?
-}
-
 class MasterView: BaseView {
     
     private var didSetupConstraints = false
-    weak var delegate: FooterViewDelegate?
     
     let listView: UITableView = {
         let view = UITableView()
@@ -48,7 +43,6 @@ class MasterView: BaseView {
         }
         
         super.updateConstraints()
-        self.listView.tableFooterView = delegate?.willDisplayFooterView()
     }
     
 }
