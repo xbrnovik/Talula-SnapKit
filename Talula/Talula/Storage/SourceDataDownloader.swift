@@ -13,9 +13,17 @@ class SourceDataDownloader {
     private let urlSession = URLSession.shared
     
     func getMeteorites(all:Bool, completion: @escaping(_ filmsDict: [[String: Any]]?, _ error: Error?) -> ()) {
-        let url = all ? MeteoriteDataURLFactory.getURL(date: nil) :  MeteoriteDataURLFactory.getURL(date: Date())
+        // Creates meteorite URL.
+        let lastUpdateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
+        let lastUpdateDate = Date.init(timeIntervalSince1970: TimeInterval(lastUpdateTimestamp))
+        var url: URL? = nil
+        if all {
+            url = MeteoriteDataURLFactory.getURL(date: nil)
+        } else {
+            url = MeteoriteDataURLFactory.getURL(date: lastUpdateDate)
+        }
         
-        //Checks is defined URL of session.
+        // Checks is defined URL of session.
         guard
             let meteoritesURL = url
         else {

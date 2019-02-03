@@ -15,7 +15,7 @@ class InformationSmallRowView: BaseView {
     
     let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "OtherMeteorite")
+        imageView.image = #imageLiteral(resourceName: "InformationGmail")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

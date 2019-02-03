@@ -11,10 +11,8 @@ import UIKit
 
 class DataSync {
     
-    internal var timestampKey = "updateTimestamp"
-    internal var updateDelay = 86400
-    
     func backgroundRun(_ completionHandler: @escaping (UIBackgroundFetchResult) -> ()) {
+        
         if needsUpdateData() {
             let all = needsDownloadAllData()
             SourceDataSync().fetchMeteorites(all: all) { (error) in
@@ -44,16 +42,16 @@ class DataSync {
     
     private func setLastUpdated() {
         let timestamp = Int(Date().timeIntervalSince1970)
-        UserDefaults.standard.set(timestamp, forKey: timestampKey)
+        UserDefaults.standard.set(timestamp, forKey: Constants.dataSync.timestampKey)
     }
     
     private func needsUpdateData() -> Bool {
         var result = true
         //If updateTimestamp is not set, UserDefaults return 0.
-        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey)
+        let updateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
         let currentTimestamp = Int(Date().timeIntervalSince1970)
         //Adds to calculation one day difference (24*60*60 = 86400 seconds).
-        let calculatedTimestamp = currentTimestamp+updateTimestamp
+        let calculatedTimestamp = currentTimestamp+Constants.dataSync.updateDelay
         if updateTimestamp >= calculatedTimestamp {
             result = false
         }
@@ -63,7 +61,7 @@ class DataSync {
     private func needsDownloadAllData() -> Bool {
         var result = false
         //If updateTimestamp is not set, UserDefaults return 0.
-        let updateTimestamp = UserDefaults.standard.integer(forKey: timestampKey)
+        let updateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
         if updateTimestamp == 0 {
             result = true
         }

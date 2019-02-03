@@ -48,6 +48,11 @@ struct Constants {
         static let subtitleFont = UIFont.preferredFont(forTextStyle: .footnote)
     }
     
+    struct dataSync {
+        static let timestampKey = "updateTimestamp"
+        static let updateDelay = 86400
+    }
+    
     struct numberFormatters {
         static let locale: NumberFormatter = {
             let formatter = NumberFormatter()
