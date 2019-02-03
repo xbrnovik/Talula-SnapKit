@@ -66,7 +66,8 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = MasterSectionFooterView()
         if let count = self.meteoritesFRC.fetchedObjects?.count {
-            footer.titleLabel.text = "\(count) meteorite(s)"
+            let text = count == 1 ? "\(count) meteorite" : "\(count) meteorites"
+            footer.titleLabel.text = text
         } else {
             footer.titleLabel.text = "Unknown count of meteorites"
         }

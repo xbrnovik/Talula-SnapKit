@@ -12,9 +12,15 @@ import UIKit
 class MasterSectionFooterView: UIView {
     private var didSetupConstraints = false
     
+    let separatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UITableView().separatorColor
+        return view
+    }()
+    
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.gray
+        label.textColor = UIColor.black
         label.font = Constants.fonts.bodyFont
         label.textAlignment = .center
         return label
@@ -29,7 +35,7 @@ class MasterSectionFooterView: UIView {
     
     init() {
         super.init(frame: .zero)
-        
+        self.addSubview(separatorView)
         self.addSubview(titleLabel)
         self.setNeedsUpdateConstraints()
     }
@@ -44,8 +50,14 @@ class MasterSectionFooterView: UIView {
             
             self.backgroundColor = UIColor.white
             
+            separatorView.snp.makeConstraints({ (make) in
+                make.top.left.right.equalToSuperview()
+                make.height.equalTo(2)
+            })
+            
             titleLabel.snp.makeConstraints({ (make) in
-                make.edges.equalToSuperview()
+                make.top.equalTo(separatorView).offset(15)
+                make.left.right.bottom.equalToSuperview()
             })
             
             didSetupConstraints = true

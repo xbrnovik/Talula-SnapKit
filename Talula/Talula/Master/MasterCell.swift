@@ -60,7 +60,7 @@ class MasterCell: UITableViewCell {
             
             iconImageView.snp.makeConstraints { (make) in
                 make.width.height.equalTo(Constants.ui.iconSize)
-                make.left.equalToSuperview().offset(Constants.ui.bigMargin)
+                make.left.equalToSuperview().offset(Constants.ui.bigMargin+5)
                 make.centerY.equalToSuperview()
             }
             
