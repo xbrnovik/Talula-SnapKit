@@ -12,47 +12,42 @@ import CoreData
 
 class TalulaTests: XCTestCase {
     
-//    lazy var persistentContainer: NSPersistentContainer = {
-//        let container = NSPersistentContainer(name: "Talula")
-//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-//            if let error = error as NSError? {
-//
-//                fatalError("Unresolved error \(error), \(error.userInfo)")
-//            }
-//        })
-//        return container
-//    }()
-    
-//    var storage: AppStorage?
+    var storage: MeteoriteStorage?
 
     override func setUp() {
         super.setUp()
-//        storage = AppStorage(managedObjectContext: persistentContainer.viewContext)
-        
-        
-        
+        storage = MeteoriteStorage()
     }
 
     override func tearDown() {
         super.tearDown()
     }
 
-    func testGetAll() {
-//        let newMeteorite = storage?.newObject()
-//        newMeteorite?.name = "moje superne"
-//        storage?.create()
-//
-//        let itemFRC = storage!.getAll()
-//
-//        print(itemFRC.fetchedObjects!.count)
-        
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testGetById() {
+        // Properties.
+        let meteoriteId: String = "1"
+        let name: String = "Test meteorite"
+        let geotype: String = "A1"
+        let latitude: Double = 1
+        let longitude: Double = 1
+        let mass: Float = 10
+        // New meteorite.
+        let meteorite = storage?.create()
+        meteorite?.meteoriteId = meteoriteId
+        meteorite?.name = name
+        meteorite?.geotype = geotype
+        meteorite?.latitude = latitude
+        meteorite?.longitude = longitude
+        meteorite?.mass = mass
+        // Call to function.
+        let savedMeteorite = storage?.getById(id: "1")
+        // Test.
+        XCTAssertEqual(savedMeteorite?.meteoriteId, meteoriteId)
+        XCTAssertEqual(savedMeteorite?.name, name)
+        XCTAssertEqual(savedMeteorite?.geotype, geotype)
+        XCTAssertEqual(savedMeteorite?.latitude, latitude)
+        XCTAssertEqual(savedMeteorite?.longitude, longitude)
+        XCTAssertEqual(savedMeteorite?.mass, mass)
     }
 
 }
