@@ -71,7 +71,7 @@
 		233409DC2201A9BA0030C269 /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		233409E02201A9BA0030C269 /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
 		233409E22201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		237362212207B9F50087C60D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		237362212207B9F50087C60D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		237362232207BD060087C60D /* IconAuthors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IconAuthors.txt; sourceTree = SOURCE_ROOT; };
 		237865962206009D00853EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2378659A22062E7400853EE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };

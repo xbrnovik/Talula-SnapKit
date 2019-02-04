@@ -39,7 +39,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         let cell: MasterCell? = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
         cell?.titleLabel.text = meteorite.name ?? "Unknown name"
         
-        if let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?, let massString = Constants.numberFormatters.locale.string(from: massNumber), massNumber != 0 {
+        if let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?, let massString = Constants.numberFormatters.localeDecimal.string(from: massNumber), massNumber != 0 {
             cell?.subTitleLabel.text = "\(massString) g"
             if meteorite.mass >= 10000 {
                 cell?.iconImageView.image = #imageLiteral(resourceName: "BigMeteorite")

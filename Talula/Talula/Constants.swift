@@ -53,13 +53,25 @@ struct Constants {
         static let updateDelay = 86400
     }
     
+    struct meteoriteMass {
+        static let highMassLevel = 10000
+        static let lowMassLevel = 1000
+    }
     struct numberFormatters {
-        static let locale: NumberFormatter = {
+        static let localeDecimal: NumberFormatter = {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
             formatter.locale = NSLocale.current
             formatter.minimumFractionDigits = 3
             formatter.maximumFractionDigits = 3
+            return formatter
+        }()
+        static let localeRounded: NumberFormatter = {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.locale = NSLocale.current
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 0
             return formatter
         }()
     }

@@ -14,14 +14,23 @@ class InformationIconsStackView: UIStackView {
     let meteoriteATypeView: InformationBigRowView = {
         let view = InformationBigRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "BigMeteorite")
-        view.titleLabel.text = "This icon describes meteorites with mass value bigger than 10000 g."
+        let highMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
+        let highMassString = Constants.numberFormatters.localeRounded.string(from: highMassNumber)
+        let highMassLevel = highMassString ?? "\(highMassNumber)"
+        view.titleLabel.text = "This icon describes meteorites with mass value bigger than \(highMassLevel) g."
         return view
     }()
     
     let meteoriteBTypeView: InformationBigRowView = {
         let view = InformationBigRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "SmaillMeteorite")
-        view.titleLabel.text = "This icon describes with mass value smaller than 10000g and bigger than 1000 g."
+        let lowMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
+        let lowMassString = Constants.numberFormatters.localeRounded.string(from: lowMassNumber)
+        let lowMassLevel = lowMassString ?? "\(lowMassNumber)"
+        let highMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
+        let highMassString = Constants.numberFormatters.localeRounded.string(from: highMassNumber)
+        let highMassLevel = highMassString ?? "\(highMassNumber)"
+        view.titleLabel.text = "This icon describes with mass value smaller than \(highMassLevel) g and bigger than \(lowMassLevel) g."
         return view
     }()
     
