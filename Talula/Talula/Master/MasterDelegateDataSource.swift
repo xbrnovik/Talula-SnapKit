@@ -15,6 +15,8 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     private var meteoritesFRC: NSFetchedResultsController<Meteorite>
     
     var presentDetailHandler: ((Meteorite) -> ())?
+    
+    // MARK: - Init
         
     init(meteoritesFRC: NSFetchedResultsController<Meteorite>) {
         self.meteoritesFRC = meteoritesFRC
@@ -70,6 +72,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     
     // MARK: - FooterView
     
+    /// Sets footer view by the count of meteorites.
     func displayFooterView(_ tableView: UITableView) {
         let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: Constants.ui.footerHeight)
         let footer = MasterSectionFooterView(frame: frame)

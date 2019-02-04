@@ -39,14 +39,11 @@ class InformationIconsStackView: UIStackView {
         self.distribution = UIStackView.Distribution.equalSpacing
         self.translatesAutoresizingMaskIntoConstraints = false
         self.spacing = 10
-        
         self.setNeedsUpdateConstraints()
         self.backgroundColor = .white
-        
         self.addArrangedSubview(meteoriteATypeView)
         self.addArrangedSubview(meteoriteBTypeView)
         self.addArrangedSubview(meteoriteCTypeView)
-        
     }
     
     required init(coder: NSCoder) {

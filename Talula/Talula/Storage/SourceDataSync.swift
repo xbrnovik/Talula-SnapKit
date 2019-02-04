@@ -14,18 +14,31 @@ class SourceDataSync {
     private let persistentContainer: NSPersistentContainer
     private let downloader: SourceDataDownloader
     
+    // MARK: - Init
+    
     init() {
         self.persistentContainer = CoreDataContainer.shared.persistentContainer
         self.downloader = SourceDataDownloader()
     }
     
-    func fetchMeteorites(all:Bool, completion: @escaping(Error?) -> Void) {
+    // MARK: - Fetch
+    
+    /**
+     1. Checks if data are obtained.
+     2. Updates persistent data by private function.
+     3. Sends error message if necessary.
+     
+     
+     - Parameter all: Information saying if all data is neccessary to download.
+     */
+    func fetchMeteorites(all: Bool, completion: @escaping(Error?) -> Void) {
         downloader.getMeteorites(all: all) { dataDictionary, error in
+            // Checks if is error a result, if true then returns.
             if let error = error {
                 completion(error)
                 return
             }
-            
+            // Checks if data are obtained.
             guard
                 let dataDictionary = dataDictionary
             else {
@@ -33,13 +46,13 @@ class SourceDataSync {
                 completion(error)
                 return
             }
-            
+            // Sets new context - backgroung contect works for both (foreground, backgroung).
             let context = self.persistentContainer.newBackgroundContext()
             context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             context.undoManager = nil
-            
+            // Updates persistent data.
             let accepted = self.syncMeteorites(dataDictionary: dataDictionary, context: context)
-            
+            // If update was not successful returns error.
             if accepted {
                 completion(nil)
             } else {
@@ -50,26 +63,35 @@ class SourceDataSync {
         }
     }
     
+    /**
+     Saves new meteorites and updates old meteorites using MeteoriteStorage class.
+     
+     - Parameters:
+            - dataDictionary: Dictionary of obtained data.
+            - context: Context which updates persistent data.
+     
+     - Returns: Information about success of update in persistent storage.
+     */
     private func syncMeteorites(dataDictionary: [[String: Any]], context: NSManagedObjectContext) -> Bool {
         var successfull = false
         let storage = MeteoriteStorage()
         storage.setExternalContext(context: context)
-        
+        // Performs update.
         context.performAndWait {
-            
+            // Loops on meteorites.
             for meteoriteDictionary in dataDictionary { //new data
-                
+                // Meteorite definition.
                 let meteorite: Meteorite?
                 let id = meteoriteDictionary["id"] as! String
-                
+                // Gets meteorite.
                 if let meteoriteObject = storage.getById(id: id) {
-                    // existing object
+                    // Gets existing object.
                     meteorite = meteoriteObject
                 } else {
-                    //new object
+                    // Creates a new object.
                     meteorite = storage.create()
                 }
-                
+                // Saves updates.
                 do {
                     try meteorite?.update(with: meteoriteDictionary) //set properties
                 } catch let error as NSError{
@@ -78,13 +100,11 @@ class SourceDataSync {
                 }
                
             }
-            
+            // Context saves all changes.
             storage.save()
             successfull = true
         }
         return successfull
     }
-    
-    
     
 }

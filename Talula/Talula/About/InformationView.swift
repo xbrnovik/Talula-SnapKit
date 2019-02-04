@@ -91,18 +91,15 @@ class InformationView: BaseView {
     override init() {
         super.init()
         self.view.backgroundColor = UIColor.white
-        
         self.view.addSubview(outerView)
         self.outerView.addSubview(scrollView)
         self.scrollView.addSubview(innerView)
-        
         innerView.addSubview(descriptionAppLabel)
         innerView.addSubview(iconsDescriptionStackView)
         innerView.addSubview(autorAppLabel)
         innerView.addSubview(contactStackView)
         innerView.addSubview(licenseHeadlineLabel)
         innerView.addSubview(licenseBodyTextView)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

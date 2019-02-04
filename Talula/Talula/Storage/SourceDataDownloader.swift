@@ -12,7 +12,14 @@ class SourceDataDownloader {
     
     private let urlSession = URLSession.shared
     
-    func getMeteorites(all:Bool, completion: @escaping(_ filmsDict: [[String: Any]]?, _ error: Error?) -> ()) {
+    /**
+     Downloads meteorite data from NASA API using URLSession.
+     
+     - Parameters:
+             - all: Information saying if all data should be download.
+             - completion: Completion with obtained data or obtained error.
+     */
+    func getMeteorites(all: Bool, completion: @escaping(_ filmsDict: [[String: Any]]?, _ error: Error?) -> ()) {
         // Creates meteorite URL.
         let lastUpdateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
         let lastUpdateDate = Date.init(timeIntervalSince1970: TimeInterval(lastUpdateTimestamp))

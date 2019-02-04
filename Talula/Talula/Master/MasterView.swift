@@ -18,13 +18,11 @@ class MasterView: BaseView {
         return view
     }()
     
-    
     override init() {
         super.init()
         self.setNeedsUpdateConstraints()
         self.backgroundColor = .white
         self.view.addSubview(listView)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

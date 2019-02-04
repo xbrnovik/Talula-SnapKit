@@ -16,6 +16,8 @@ class InformationViewController: UIViewController {
         return view
     }()
     
+    // MARK: - Init
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view = informationView

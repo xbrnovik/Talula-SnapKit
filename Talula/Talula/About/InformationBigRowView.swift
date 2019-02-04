@@ -34,7 +34,6 @@ class InformationBigRowView: BaseView {
         self.backgroundColor = .white
         self.view.addSubview(titleLabel)
         self.view.addSubview(iconImageView)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -14,6 +14,7 @@ class CoreDataContainer {
     private init() {}
     static let shared = CoreDataContainer()
     
+    /// Persistent container singleton.
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Talula")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -27,14 +28,5 @@ class CoreDataContainer {
         container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
-    
-    func saveChanges(){
-        do {
-            try CoreDataContainer.shared.persistentContainer.viewContext.save()
-        } catch let error as NSError {
-            print("CoreData save error: \(error.debugDescription)")
-            abort()
-        }
-    }
     
 }

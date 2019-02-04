@@ -34,13 +34,10 @@ class InformationContactStackView: UIStackView {
         self.distribution = UIStackView.Distribution.equalSpacing
         self.translatesAutoresizingMaskIntoConstraints = false
         self.spacing = 5
-        
         self.setNeedsUpdateConstraints()
         self.backgroundColor = .white
-        
         self.addArrangedSubview(gmailView)
         self.addArrangedSubview(linkedInView)
-        
     }
     
     required init(coder: NSCoder) {

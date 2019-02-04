@@ -22,31 +22,27 @@ class MasterViewController: UIViewController {
     var masterDelegateDataSource: MasterDelegateDataSource? = nil
     var meteoriteStorage: MeteoriteStorage? = nil
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // MARK: - Init
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        
         self.view = masterView
         self.title = "Meteorites"
-        
+        // Sets storage.
         self.meteoriteStorage = MeteoriteStorage(self)
-        
         guard
             let meteoriteStorage = meteoriteStorage
         else {
             return
         }
-        
+        // Sets delegates.
         masterDelegateDataSource = MasterDelegateDataSource(meteoritesFRC: meteoriteStorage.fetchedResultsController)
         masterView.listView.delegate = masterDelegateDataSource
         masterView.listView.dataSource = masterDelegateDataSource
         masterDelegateDataSource?.presentDetailHandler = { [weak self] (meteorite) in
             self?.presentDetail(meteorite: meteorite)
         }
-        
+        // Sets info button.
         let infoButton = UIButton(type: .infoLight)
         infoButton.addTarget(self, action: #selector(presentInformation), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: infoButton)
@@ -57,16 +53,21 @@ class MasterViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Present
+    
+    /// Presents master view.
     func presentMaster(from controller: UINavigationController, animated: Bool)  {
         controller.pushViewController(self, animated: animated)
     }
     
+    /// Presents detail view.
     func presentDetail(meteorite: Meteorite) {
         let detailViewConstroller = DetailViewController()
         detailViewConstroller.setModel(meteorite)
         self.navigationController?.pushViewController(detailViewConstroller, animated: true)
     }
     
+    /// Presents informational view.
     @objc func presentInformation() {
         let informationController = InformationViewController()
         self.navigationController?.pushViewController(informationController, animated: true)
@@ -76,6 +77,7 @@ class MasterViewController: UIViewController {
 
 extension MasterViewController: NSFetchedResultsControllerDelegate {
     
+    /// Updates meteorites tableview with new content saved.
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         DispatchQueue.main.async { [weak self] in
             if let self = self {
@@ -85,6 +87,7 @@ extension MasterViewController: NSFetchedResultsControllerDelegate {
         }
     }
     
+    /// Animates new content of view.
     private func setAnimation(for view: UIView) {
         let transition = CATransition()
         transition.duration = 0.4

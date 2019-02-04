@@ -16,6 +16,8 @@ class DetailViewController: UIViewController {
         view.backgroundColor = UIColor.white
         return view
     }()
+    
+    // MARK: - Init
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -27,6 +29,13 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Set view
+    
+    /**
+     Sets map data up to given meteorite data.
+     
+     - Parameter meteorite: The meteorite beeing shown on map.
+     */
     func setModel(_ meteorite: Meteorite) {
         // Defines map data.
         let latitude: CLLocationDegrees = meteorite.latitude
@@ -44,6 +53,7 @@ class DetailViewController: UIViewController {
         detailView.mapView.setRegion(region, animated: true)
         
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // Deletes old annotations.
