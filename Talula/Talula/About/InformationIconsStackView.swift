@@ -24,7 +24,7 @@ class InformationIconsStackView: UIStackView {
     let meteoriteBTypeView: InformationBigRowView = {
         let view = InformationBigRowView()
         view.iconImageView.image = #imageLiteral(resourceName: "SmaillMeteorite")
-        let lowMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
+        let lowMassNumber = Constants.meteoriteMass.lowMassLevel as NSNumber
         let lowMassString = Constants.numberFormatters.localeRounded.string(from: lowMassNumber)
         let lowMassLevel = lowMassString ?? "\(lowMassNumber)"
         let highMassNumber = Constants.meteoriteMass.highMassLevel as NSNumber
