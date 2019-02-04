@@ -29,7 +29,6 @@ class SourceDataDownloader {
         } else {
             url = MeteoriteDataURLFactory.getURL(date: lastUpdateDate)
         }
-        
         // Checks is defined URL of session.
         guard
             let meteoritesURL = url
@@ -38,9 +37,8 @@ class SourceDataDownloader {
             completion(nil, error)
             return
         }
-        
+        // Starts url session with given url.
         urlSession.dataTask(with: meteoritesURL) { (data, response, error) in
-                        
             // Checks if received data exists.
             guard
                 let data = data
@@ -49,7 +47,6 @@ class SourceDataDownloader {
                 completion(nil, error)
                 return
             }
-            
             // Serializes received data.
             do {
                 let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
@@ -62,7 +59,6 @@ class SourceDataDownloader {
             } catch {
                 completion(nil, error)
             }
-            
         }.resume()
     }
     

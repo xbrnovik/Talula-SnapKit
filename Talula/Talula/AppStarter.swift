@@ -25,7 +25,7 @@ final class AppStarter {
         if #available(iOS 11.0, *) {
             self.navigationController.navigationBar.prefersLargeTitles = true
         }
-        
+        // Sets root view.
         self.window.rootViewController = self.rootViewController
         self.window.makeKeyAndVisible()
         // Shows master.

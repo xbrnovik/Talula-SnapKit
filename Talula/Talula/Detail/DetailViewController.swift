@@ -43,7 +43,6 @@ class DetailViewController: UIViewController {
         let location = CLLocationCoordinate2DMake(latitude, longitude)
         let span = MKCoordinateSpan(latitudeDelta: Constants.map.latitudeDelta, longitudeDelta: Constants.map.longitudeDelta)
         let region = MKCoordinateRegion(center: location, span: span)
-        
         // Creates new annotation and set region.
         let newAnnotation = MKPointAnnotation()
         newAnnotation.title = meteorite.name
