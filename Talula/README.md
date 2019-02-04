@@ -4,7 +4,7 @@ Zdravim,
 
 chcela som týmto spôsobom objasniť/okomentovať ako som niektoré časti zadania poňala. Dokumentácia podstatnejších častí metód je už priamo v swift súboroch.
 
-V aplikácii som na tvorbu GUI použila SnapKit v ktorom je mi prívetivejšia než Storyboard. V repozitári sa nachádza iba Podfile, a preto je potrebné najprv:
+V aplikácii som na tvorbu GUI použila SnapKit v ktorom je mi tvorba GUI prívetivejšia než Storyboard. V repozitári sa nachádza iba Podfile, a preto je potrebné najprv:
     pod install
     pod update
 
@@ -20,8 +20,8 @@ Aplikácia využíva defaultnú priesvitnú časť safe arey. Nepriesvitná nep�
 Sťahovanie NASA dát prebieha pomocou triedy URLSession. V konkrétnej URL je už definovaná query nad dátami. Dáta by alternatívne bolo možné sťahovať tiež:
     a) pomocou SODA SDK (http://socrata.github.io/soda swift/),
     b) vytvorením requestu prostredníctvom HTTP knižnice Alamofire (https://github.com/Alamofire/Alamofire).
-Myslím si, že v aplikácii neprebieha taký počet requestov a operácii nad dátami žeby použitie týchto knižníc bolo potrebné.
-Pred sťahovaním aplikácia neoveruje, či je uživateľ pripojený k internetu. Ani jedna z knižníc to neodporúča, je to akoby skôr krok navyše, ak nie je uživateľ pripojený k internetu, jednoducho bude request neúspešný. V prípade tejto aplikácie, o tom aplikácia vypíše správu na konzolu, ale inak bude pracovať ďalej rovnako t.j. nespadne (nemala by).
+Myslím si, že v aplikácii neprebieha taký počet requestov a operácii nad dátami, aby použitie týchto knižníc bolo potrebné.
+Pred sťahovaním aplikácia neoveruje, či je uživateľ pripojený k internetu. Ani jedna z knižníc to neodporúča. Je to akoby skôr krok navyše, ak nie je uživateľ pripojený k internetu, jednoducho bude request neúspešný. V tejto implementácii aplikácia o tom iba vypíše "error" správu na konzolu, ale inak bude pracovať ďalej rovnako t.j. nespadne (nemala by).
 Z hľadiska stiahnutia dát 1x denne, "performFetchWithCompletionHandler" neumožňuje presne stanoviť rozsah medzi prevolaniami sťahovania dát, jedine minimálne odstup medzi nimi. Tento rozsah je nastavený na čo najmenší s tým, že v rámci prevolanej metódy si aplikácia stráži, či je potrebné dáta aktualizovať, t.j. či už prešiel 1 deň. Hypoteticky môže sa stať, že uživateľ otvorí aplikáciu a update ešte stále nenastal, a preto táto kontrola nastáva aj pri tom, keď ide aplikácia na popredie. Je to snaha akoby, čo najviac zabezpečiť tú periodicitu 1 dňa.
 
 # Aktualizácia dát #
@@ -52,4 +52,4 @@ Na ukladanie dát sú použité Core Data, alternatívou by bol Realm, ale zatia
 Keby bola aplikácia zložitejšia prichýlila by som sa k návrhovému vzoru Koordinátor, ktorý by vytváral jednotlivé "moduly", ale tým, že je aplikácia jednoduchá, vytvorila som iba jednoduchú triedu AppStarter, ktorá iniciuje aplikáciu.
 
 
-Snáď aplikácia splnila zadanie a nespadne :)
+Snáď aplikácia splnila zadanie, teším sa na spätnú väzbu! :)
