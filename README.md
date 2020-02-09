@@ -24,8 +24,8 @@ if #available(iOS 11, *) {
 
 Sťahovanie NASA dát prebieha pomocou triedy `URLSession`. V konkrétnej URL je už definovaná query nad dátami. Dáta by alternatívne bolo možné sťahovať tiež:
 
-- pomocou [SODA SDK]([http://socrata.github.io/soda-swift/](http://socrata.github.io/soda-swift/)),
-- vytvorením requestu prostredníctvom knižnice [Alamofire]([https://github.com/Alamofire/Alamofire](https://github.com/Alamofire/Alamofire)).
+- pomocou [SODA SDK][soda-sdk]
+- vytvorením requestu prostredníctvom knižnice [Alamofire][alamofire-sdk]
 
 Myslím si, že v aplikácii neprebieha taký počet requestov a operácii nad dátami, aby použitie týchto knižníc bolo potrebné. Pred sťahovaním aplikácia neoveruje, či je uživateľ pripojený k internetu. Ani jedna z knižníc to neodporúča. Je to akoby skôr krok navyše, ak nie je uživateľ pripojený k internetu, jednoducho bude request neúspešný. V tejto implementácii aplikácia o tom iba vypíše *error* správu na konzolu, ale inak bude pracovať ďalej rovnako t.j. nespadne (nemala by). Z hľadiska stiahnutia dát 1x denne, `performFetchWithCompletionHandler` neumožňuje presne stanoviť rozsah medzi prevolaniami sťahovania dát, jedine minimálne odstup medzi nimi. Tento rozsah je nastavený na čo najmenší s tým, že v rámci prevolanej metódy si aplikácia stráži, či je potrebné dáta aktualizovať, t.j. či už prešiel 1 deň.
 
@@ -66,3 +66,6 @@ Na ukladanie dát sú použité Core Data, alternatívou by bol Realm, ale zatia
 Keby bola aplikácia zložitejšia prichýlila by som sa k návrhovému vzoru `Koordinátor`, ktorý by vytváral jednotlivé moduly. Avšak tým, že je aplikácia jednoduchá, vytvorila som iba jednoduchú triedu AppStarter, ktorá iniciuje aplikáciu.
 
 Snáď aplikácia splnila zadanie, teším sa na spätnú väzbu! :)
+
+[soda-sdk]: <http://socrata.github.io/soda-swift/>
+[alamofire-sdk]: <https://github.com/Alamofire/Alamofire>
