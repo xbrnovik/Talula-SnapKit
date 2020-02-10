@@ -12,7 +12,7 @@ import CoreData
 
 class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    private var meteoritesFRC: NSFetchedResultsController<Meteorite>
+    private let meteoritesFRC: NSFetchedResultsController<Meteorite>
     
     var presentDetailHandler: ((Meteorite) -> ())?
     
@@ -36,10 +36,14 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell()
         let meteorite = meteoritesFRC.object(at: indexPath)
-        let cell: MasterCell? = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ui.masterReusableCellId) as? MasterCell
         cell?.titleLabel.text = meteorite.name ?? "Unknown name"
         
-        if let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?, let massString = Constants.numberFormatters.localeDecimal.string(from: massNumber), massNumber != 0 {
+        if
+        let massNumber = (round(1000 * meteorite.mass) / 1000) as NSNumber?,
+        let massString = Constants.numberFormatters.localeDecimal.string(from: massNumber),
+        massNumber != 0 {
+            
             cell?.subTitleLabel.text = "\(massString) g"
             if meteorite.mass >= 10000 {
                 cell?.iconImageView.image = #imageLiteral(resourceName: "BigMeteorite")
@@ -65,7 +69,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMeteorite = self.meteoritesFRC.object(at: indexPath)
+        let selectedMeteorite = meteoritesFRC.object(at: indexPath)
         presentDetailHandler?(selectedMeteorite)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -76,7 +80,7 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
     func displayFooterView(_ tableView: UITableView) {
         let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: Constants.ui.footerHeight)
         let footer = MasterSectionFooterView(frame: frame)
-        if let count = self.meteoritesFRC.fetchedObjects?.count {
+        if let count = meteoritesFRC.fetchedObjects?.count {
             let text = count == 1 ? "\(count) meteorite" : "\(count) meteorites"
             footer.titleLabel.text = text
         } else {
@@ -84,5 +88,4 @@ class MasterDelegateDataSource: NSObject, UITableViewDataSource, UITableViewDele
         }
         tableView.tableFooterView = footer
     }
-    
 }

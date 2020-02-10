@@ -12,13 +12,13 @@ import UIKit
 final class AppStarter {
     
     /// Application window.
-    fileprivate let window: UIWindow = UIWindow(frame: UIScreen.main.bounds)
+    fileprivate var window: UIWindow
     /// NavigationController used in app.
     fileprivate var navigationController: UINavigationController
     /// RootController of app.
     fileprivate var rootViewController: UINavigationController
     
-    init() {
+    init(_ windowScene: UIWindowScene) {
         self.rootViewController = UINavigationController()
         navigationController = rootViewController
         // Sets modern navigation bar.
@@ -26,12 +26,12 @@ final class AppStarter {
             self.navigationController.navigationBar.prefersLargeTitles = true
         }
         // Sets root view.
+        self.window = UIWindow(windowScene: windowScene)
         self.window.rootViewController = self.rootViewController
         self.window.makeKeyAndVisible()
         // Shows master.
         showHome()
     }
-    
     
     /// Loads home view, in this case Master module.
     func showHome(){

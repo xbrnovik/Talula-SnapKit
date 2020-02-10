@@ -49,6 +49,7 @@ struct Constants {
     }
     
     struct dataSync {
+        static let taskName = "cz.meteorites.refresh"
         static let timestampKey = "updateTimestamp"
         static let updateDelay = 86400
     }

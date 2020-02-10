@@ -3,234 +3,243 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2304FA0F2201EC8000285E27 /* Meteorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304FA0D2201EC8000285E27 /* Meteorite+CoreDataClass.swift */; };
-		2304FA102201EC8000285E27 /* Meteorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304FA0E2201EC8000285E27 /* Meteorite+CoreDataProperties.swift */; };
-		2321F9C92201AC61005A5000 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9C82201AC61005A5000 /* BaseView.swift */; };
-		2321F9CD2201ACAC005A5000 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9CC2201ACAC005A5000 /* MasterViewController.swift */; };
-		2321F9CF2201B00E005A5000 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9CE2201B00E005A5000 /* MasterView.swift */; };
-		2321F9D12201B0A2005A5000 /* MasterDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */; };
-		2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D22201B2FF005A5000 /* MasterCell.swift */; };
-		2321F9D52201B667005A5000 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321F9D42201B667005A5000 /* Constants.swift */; };
-		233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409CB2201A9B90030C269 /* AppDelegate.swift */; };
-		233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409CD2201A9B90030C269 /* DetailViewController.swift */; };
-		233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233409D42201A9BA0030C269 /* LaunchScreen.storyboard */; };
-		233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233409E02201A9BA0030C269 /* TalulaTests.swift */; };
-		237362222207B9F50087C60D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 237362212207B9F50087C60D /* Podfile */; };
-		237362242207BD060087C60D /* IconAuthors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 237362232207BD060087C60D /* IconAuthors.txt */; };
-		237865972206009D00853EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237865962206009D00853EE3 /* Assets.xcassets */; };
-		2378659F22065E7000853EE3 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378659E22065E7000853EE3 /* InformationViewController.swift */; };
-		237865A122065E7F00853EE3 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A022065E7F00853EE3 /* InformationView.swift */; };
-		237865A422065FA700853EE3 /* InformationBigRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A322065FA700853EE3 /* InformationBigRowView.swift */; };
-		237865A62206621800853EE3 /* InformationIconsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A52206621800853EE3 /* InformationIconsStackView.swift */; };
-		237865A82206622700853EE3 /* InformationContactStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A72206622700853EE3 /* InformationContactStackView.swift */; };
-		237865AA22066AC800853EE3 /* MasterSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865A922066AC800853EE3 /* MasterSectionFooterView.swift */; };
-		237865AC220671EE00853EE3 /* InformationSmallRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865AB220671EE00853EE3 /* InformationSmallRowView.swift */; };
-		237865B02207384A00853EE3 /* MeteoriteDataURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237865AF2207384A00853EE3 /* MeteoriteDataURLFactory.swift */; };
-		2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6122201D3D7005CDE9D /* AppStarter.swift */; };
-		2384C6152201D944005CDE9D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6142201D944005CDE9D /* DetailView.swift */; };
-		2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6162201E3A2005CDE9D /* Talula.xcdatamodeld */; };
-		2384C61A2201E42F005CDE9D /* MeteoriteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384C6192201E42F005CDE9D /* MeteoriteStorage.swift */; };
-		23C8D9C9220225780000B4FD /* SourceDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9C8220225780000B4FD /* SourceDataDownloader.swift */; };
-		23C8D9CB220226C30000B4FD /* SourceDataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9CA220226C30000B4FD /* SourceDataSync.swift */; };
-		23C8D9CD220246DE0000B4FD /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */; };
-		23C8D9CF220343FE0000B4FD /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8D9CE220343FE0000B4FD /* DataSync.swift */; };
-		6B411A973E53A0D16870F23C /* Pods_Talula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005BDD46A75274AAC9D5D612 /* Pods_Talula.framework */; };
-		D1073FC182EDD9FCBD7D5C4A /* Pods_TalulaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7171D1B861DE957A8F5532C /* Pods_TalulaTests.framework */; };
+		236712DF23F0583200E189FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236712DE23F0583200E189FF /* Assets.xcassets */; };
+		236712E223F0583200E189FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236712E023F0583200E189FF /* LaunchScreen.storyboard */; };
+		236712ED23F0583300E189FF /* TalulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236712EC23F0583300E189FF /* TalulaTests.swift */; };
+		2367131F23F059C000E189FF /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130123F059BF00E189FF /* AppStarter.swift */; };
+		2367132023F059C000E189FF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130223F059BF00E189FF /* BaseView.swift */; };
+		2367132123F059C000E189FF /* MasterSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130423F059BF00E189FF /* MasterSectionFooterView.swift */; };
+		2367132223F059C000E189FF /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130523F059BF00E189FF /* MasterView.swift */; };
+		2367132323F059C000E189FF /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130623F059BF00E189FF /* MasterViewController.swift */; };
+		2367132423F059C000E189FF /* MasterDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130723F059BF00E189FF /* MasterDelegateDataSource.swift */; };
+		2367132523F059C000E189FF /* MasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130823F059BF00E189FF /* MasterCell.swift */; };
+		2367132623F059C000E189FF /* InformationContactStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130A23F059BF00E189FF /* InformationContactStackView.swift */; };
+		2367132723F059C000E189FF /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130B23F059BF00E189FF /* InformationViewController.swift */; };
+		2367132823F059C000E189FF /* InformationSmallRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130C23F059BF00E189FF /* InformationSmallRowView.swift */; };
+		2367132923F059C000E189FF /* InformationBigRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130D23F059BF00E189FF /* InformationBigRowView.swift */; };
+		2367132A23F059C000E189FF /* InformationIconsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130E23F059BF00E189FF /* InformationIconsStackView.swift */; };
+		2367132B23F059C000E189FF /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367130F23F059BF00E189FF /* InformationView.swift */; };
+		2367132C23F059C000E189FF /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131023F059BF00E189FF /* DataSync.swift */; };
+		2367132D23F059C000E189FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131223F059BF00E189FF /* DetailView.swift */; };
+		2367132E23F059C000E189FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131323F059BF00E189FF /* DetailViewController.swift */; };
+		2367132F23F059C000E189FF /* SourceDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131523F059BF00E189FF /* SourceDataDownloader.swift */; };
+		2367133023F059C000E189FF /* Talula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2367131623F059BF00E189FF /* Talula.xcdatamodeld */; };
+		2367133123F059C000E189FF /* SourceDataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131823F059BF00E189FF /* SourceDataSync.swift */; };
+		2367133223F059C000E189FF /* Meteorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131923F059BF00E189FF /* Meteorite+CoreDataProperties.swift */; };
+		2367133323F059C000E189FF /* MeteoriteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131A23F059BF00E189FF /* MeteoriteStorage.swift */; };
+		2367133423F059C000E189FF /* Meteorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131B23F059BF00E189FF /* Meteorite+CoreDataClass.swift */; };
+		2367133523F059C000E189FF /* MeteoriteDataURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131C23F059BF00E189FF /* MeteoriteDataURLFactory.swift */; };
+		2367133623F059C000E189FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131D23F059BF00E189FF /* Constants.swift */; };
+		2367133723F059C000E189FF /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367131E23F059C000E189FF /* CoreDataContainer.swift */; };
+		2367133B23F05D9500E189FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367133A23F05D9500E189FF /* SceneDelegate.swift */; };
+		2367133D23F064CB00E189FF /* DataRefreshOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367133C23F064CB00E189FF /* DataRefreshOperation.swift */; };
+		2367133F23F06AE800E189FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367133E23F06AE800E189FF /* AppDelegate.swift */; };
+		2367134123F06F0200E189FF /* TaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367134023F06F0200E189FF /* TaskScheduler.swift */; };
+		2367137423F19C8400E189FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2367137323F19C8400E189FF /* Podfile */; };
+		2367137623F19E1B00E189FF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2367137523F19E1B00E189FF /* README.md */; };
+		4C96662748FCCB0BA0D57268 /* Pods_Talula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661F5613285450408857D89A /* Pods_Talula.framework */; };
+		C3FA3217E262167245FBFD16 /* Pods_TalulaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEF3B876E2F886424BB81A3 /* Pods_TalulaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		233409DD2201A9BA0030C269 /* PBXContainerItemProxy */ = {
+		236712E923F0583300E189FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 233409C02201A9B90030C269 /* Project object */;
+			containerPortal = 236712C723F0583100E189FF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 233409C72201A9B90030C269;
+			remoteGlobalIDString = 236712CE23F0583200E189FF;
 			remoteInfo = Talula;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005BDD46A75274AAC9D5D612 /* Pods_Talula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2304FA0D2201EC8000285E27 /* Meteorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2304FA0E2201EC8000285E27 /* Meteorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2321F9C82201AC61005A5000 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		2321F9CC2201ACAC005A5000 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		2321F9CE2201B00E005A5000 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
-		2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDelegateDataSource.swift; sourceTree = "<group>"; };
-		2321F9D22201B2FF005A5000 /* MasterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCell.swift; sourceTree = "<group>"; };
-		2321F9D42201B667005A5000 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		233409C82201A9B90030C269 /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		233409CB2201A9B90030C269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		233409CD2201A9B90030C269 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		233409D52201A9BA0030C269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		233409D72201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		233409DC2201A9BA0030C269 /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		233409E02201A9BA0030C269 /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
-		233409E22201A9BA0030C269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		237362212207B9F50087C60D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		237362232207BD060087C60D /* IconAuthors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IconAuthors.txt; sourceTree = SOURCE_ROOT; };
-		237865962206009D00853EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2378659E22065E7000853EE3 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		237865A022065E7F00853EE3 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
-		237865A322065FA700853EE3 /* InformationBigRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBigRowView.swift; sourceTree = "<group>"; };
-		237865A52206621800853EE3 /* InformationIconsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationIconsStackView.swift; sourceTree = "<group>"; };
-		237865A72206622700853EE3 /* InformationContactStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationContactStackView.swift; sourceTree = "<group>"; };
-		237865A922066AC800853EE3 /* MasterSectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSectionFooterView.swift; sourceTree = "<group>"; };
-		237865AB220671EE00853EE3 /* InformationSmallRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationSmallRowView.swift; sourceTree = "<group>"; };
-		237865AF2207384A00853EE3 /* MeteoriteDataURLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteDataURLFactory.swift; sourceTree = "<group>"; };
-		2384C6122201D3D7005CDE9D /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
-		2384C6142201D944005CDE9D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		2384C6172201E3A2005CDE9D /* Talula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talula.xcdatamodel; sourceTree = "<group>"; };
-		2384C6192201E42F005CDE9D /* MeteoriteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteStorage.swift; sourceTree = "<group>"; };
-		23C8D9C8220225780000B4FD /* SourceDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDataDownloader.swift; sourceTree = "<group>"; };
-		23C8D9CA220226C30000B4FD /* SourceDataSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDataSync.swift; sourceTree = "<group>"; };
-		23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
-		23C8D9CE220343FE0000B4FD /* DataSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSync.swift; sourceTree = "<group>"; };
-		2839A85C2062DF988D26CE8A /* Pods-TalulaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.debug.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		77C6EBFC0310351F30C37981 /* Pods-Talula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.debug.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.debug.xcconfig"; sourceTree = "<group>"; };
-		C812E33CC1752583EC8BBFEE /* Pods-Talula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.release.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.release.xcconfig"; sourceTree = "<group>"; };
-		D7171D1B861DE957A8F5532C /* Pods_TalulaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalulaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2BDB717D655483852E269DC /* Pods-TalulaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.release.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.release.xcconfig"; sourceTree = "<group>"; };
+		236712CF23F0583200E189FF /* Talula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talula.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		236712DE23F0583200E189FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		236712E123F0583200E189FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		236712E323F0583200E189FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236712E823F0583300E189FF /* TalulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		236712EC23F0583300E189FF /* TalulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalulaTests.swift; sourceTree = "<group>"; };
+		236712EE23F0583300E189FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2367130123F059BF00E189FF /* AppStarter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
+		2367130223F059BF00E189FF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2367130423F059BF00E189FF /* MasterSectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterSectionFooterView.swift; sourceTree = "<group>"; };
+		2367130523F059BF00E189FF /* MasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		2367130623F059BF00E189FF /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		2367130723F059BF00E189FF /* MasterDelegateDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDelegateDataSource.swift; sourceTree = "<group>"; };
+		2367130823F059BF00E189FF /* MasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterCell.swift; sourceTree = "<group>"; };
+		2367130A23F059BF00E189FF /* InformationContactStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationContactStackView.swift; sourceTree = "<group>"; };
+		2367130B23F059BF00E189FF /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		2367130C23F059BF00E189FF /* InformationSmallRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationSmallRowView.swift; sourceTree = "<group>"; };
+		2367130D23F059BF00E189FF /* InformationBigRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationBigRowView.swift; sourceTree = "<group>"; };
+		2367130E23F059BF00E189FF /* InformationIconsStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationIconsStackView.swift; sourceTree = "<group>"; };
+		2367130F23F059BF00E189FF /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		2367131023F059BF00E189FF /* DataSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSync.swift; sourceTree = "<group>"; };
+		2367131223F059BF00E189FF /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2367131323F059BF00E189FF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2367131523F059BF00E189FF /* SourceDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceDataDownloader.swift; sourceTree = "<group>"; };
+		2367131723F059BF00E189FF /* Talula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talula.xcdatamodel; sourceTree = "<group>"; };
+		2367131823F059BF00E189FF /* SourceDataSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceDataSync.swift; sourceTree = "<group>"; };
+		2367131923F059BF00E189FF /* Meteorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2367131A23F059BF00E189FF /* MeteoriteStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteStorage.swift; sourceTree = "<group>"; };
+		2367131B23F059BF00E189FF /* Meteorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2367131C23F059BF00E189FF /* MeteoriteDataURLFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteDataURLFactory.swift; sourceTree = "<group>"; };
+		2367131D23F059BF00E189FF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2367131E23F059C000E189FF /* CoreDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
+		2367133A23F05D9500E189FF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2367133C23F064CB00E189FF /* DataRefreshOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRefreshOperation.swift; sourceTree = "<group>"; };
+		2367133E23F06AE800E189FF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2367134023F06F0200E189FF /* TaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScheduler.swift; sourceTree = "<group>"; };
+		2367137323F19C8400E189FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		2367137523F19E1B00E189FF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		2634E4E775BD7D0E0A7C2CE2 /* Pods-Talula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.debug.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.debug.xcconfig"; sourceTree = "<group>"; };
+		661F5613285450408857D89A /* Pods_Talula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7341094FBFCD0B08FB376737 /* Pods-TalulaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.debug.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		857F3A93E32C0F9764905F38 /* Pods-TalulaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalulaTests.release.xcconfig"; path = "Target Support Files/Pods-TalulaTests/Pods-TalulaTests.release.xcconfig"; sourceTree = "<group>"; };
+		AEEF3B876E2F886424BB81A3 /* Pods_TalulaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalulaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B622A0D0C7D6E402751505 /* Pods-Talula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talula.release.xcconfig"; path = "Target Support Files/Pods-Talula/Pods-Talula.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		233409C52201A9B90030C269 /* Frameworks */ = {
+		236712CC23F0583200E189FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B411A973E53A0D16870F23C /* Pods_Talula.framework in Frameworks */,
+				4C96662748FCCB0BA0D57268 /* Pods_Talula.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		233409D92201A9BA0030C269 /* Frameworks */ = {
+		236712E523F0583300E189FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1073FC182EDD9FCBD7D5C4A /* Pods_TalulaTests.framework in Frameworks */,
+				C3FA3217E262167245FBFD16 /* Pods_TalulaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		233409BF2201A9B90030C269 = {
+		0B343F4C281DF1F94FC56F50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				233409CA2201A9B90030C269 /* Talula */,
-				233409DF2201A9BA0030C269 /* TalulaTests */,
-				233409C92201A9B90030C269 /* Products */,
-				816C3EDC43DB716F0ECD0875 /* Pods */,
-				A7386FE0FE9343747424C915 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		233409C92201A9B90030C269 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				233409C82201A9B90030C269 /* Talula.app */,
-				233409DC2201A9BA0030C269 /* TalulaTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		233409CA2201A9B90030C269 /* Talula */ = {
-			isa = PBXGroup;
-			children = (
-				237362212207B9F50087C60D /* Podfile */,
-				237362232207BD060087C60D /* IconAuthors.txt */,
-				233409CB2201A9B90030C269 /* AppDelegate.swift */,
-				2384C6122201D3D7005CDE9D /* AppStarter.swift */,
-				23C8D9CE220343FE0000B4FD /* DataSync.swift */,
-				23C8D9CC220246DD0000B4FD /* CoreDataContainer.swift */,
-				2321F9D42201B667005A5000 /* Constants.swift */,
-				2321F9C82201AC61005A5000 /* BaseView.swift */,
-				233409D42201A9BA0030C269 /* LaunchScreen.storyboard */,
-				237865962206009D00853EE3 /* Assets.xcassets */,
-				233409D72201A9BA0030C269 /* Info.plist */,
-				2384C6102201CA33005CDE9D /* Master */,
-				2384C6112201CA3D005CDE9D /* Detail */,
-				237865A222065E8A00853EE3 /* About */,
-				2384C61F2201E528005CDE9D /* Storage */,
-			);
-			path = Talula;
-			sourceTree = "<group>";
-		};
-		233409DF2201A9BA0030C269 /* TalulaTests */ = {
-			isa = PBXGroup;
-			children = (
-				233409E02201A9BA0030C269 /* TalulaTests.swift */,
-				233409E22201A9BA0030C269 /* Info.plist */,
-			);
-			path = TalulaTests;
-			sourceTree = "<group>";
-		};
-		237865A222065E8A00853EE3 /* About */ = {
-			isa = PBXGroup;
-			children = (
-				2378659E22065E7000853EE3 /* InformationViewController.swift */,
-				237865A022065E7F00853EE3 /* InformationView.swift */,
-				237865A52206621800853EE3 /* InformationIconsStackView.swift */,
-				237865A72206622700853EE3 /* InformationContactStackView.swift */,
-				237865A322065FA700853EE3 /* InformationBigRowView.swift */,
-				237865AB220671EE00853EE3 /* InformationSmallRowView.swift */,
-			);
-			path = About;
-			sourceTree = "<group>";
-		};
-		2384C6102201CA33005CDE9D /* Master */ = {
-			isa = PBXGroup;
-			children = (
-				2321F9CC2201ACAC005A5000 /* MasterViewController.swift */,
-				2321F9CE2201B00E005A5000 /* MasterView.swift */,
-				2321F9D02201B0A2005A5000 /* MasterDelegateDataSource.swift */,
-				237865A922066AC800853EE3 /* MasterSectionFooterView.swift */,
-				2321F9D22201B2FF005A5000 /* MasterCell.swift */,
-			);
-			path = Master;
-			sourceTree = "<group>";
-		};
-		2384C6112201CA3D005CDE9D /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				233409CD2201A9B90030C269 /* DetailViewController.swift */,
-				2384C6142201D944005CDE9D /* DetailView.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		2384C61F2201E528005CDE9D /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				2304FA0D2201EC8000285E27 /* Meteorite+CoreDataClass.swift */,
-				2304FA0E2201EC8000285E27 /* Meteorite+CoreDataProperties.swift */,
-				2384C6162201E3A2005CDE9D /* Talula.xcdatamodeld */,
-				2384C6192201E42F005CDE9D /* MeteoriteStorage.swift */,
-				23C8D9CA220226C30000B4FD /* SourceDataSync.swift */,
-				23C8D9C8220225780000B4FD /* SourceDataDownloader.swift */,
-				237865AF2207384A00853EE3 /* MeteoriteDataURLFactory.swift */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
-		816C3EDC43DB716F0ECD0875 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				77C6EBFC0310351F30C37981 /* Pods-Talula.debug.xcconfig */,
-				C812E33CC1752583EC8BBFEE /* Pods-Talula.release.xcconfig */,
-				2839A85C2062DF988D26CE8A /* Pods-TalulaTests.debug.xcconfig */,
-				F2BDB717D655483852E269DC /* Pods-TalulaTests.release.xcconfig */,
+				2634E4E775BD7D0E0A7C2CE2 /* Pods-Talula.debug.xcconfig */,
+				D7B622A0D0C7D6E402751505 /* Pods-Talula.release.xcconfig */,
+				7341094FBFCD0B08FB376737 /* Pods-TalulaTests.debug.xcconfig */,
+				857F3A93E32C0F9764905F38 /* Pods-TalulaTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A7386FE0FE9343747424C915 /* Frameworks */ = {
+		236712C623F0583100E189FF = {
 			isa = PBXGroup;
 			children = (
-				005BDD46A75274AAC9D5D612 /* Pods_Talula.framework */,
-				D7171D1B861DE957A8F5532C /* Pods_TalulaTests.framework */,
+				236712D123F0583200E189FF /* Talula */,
+				236712EB23F0583300E189FF /* TalulaTests */,
+				236712D023F0583200E189FF /* Products */,
+				0B343F4C281DF1F94FC56F50 /* Pods */,
+				CD0D24650E015B6D8CD8665B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		236712D023F0583200E189FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				236712CF23F0583200E189FF /* Talula.app */,
+				236712E823F0583300E189FF /* TalulaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		236712D123F0583200E189FF /* Talula */ = {
+			isa = PBXGroup;
+			children = (
+				2367137323F19C8400E189FF /* Podfile */,
+				2367137523F19E1B00E189FF /* README.md */,
+				2367133E23F06AE800E189FF /* AppDelegate.swift */,
+				2367133A23F05D9500E189FF /* SceneDelegate.swift */,
+				2367130123F059BF00E189FF /* AppStarter.swift */,
+				2367134023F06F0200E189FF /* TaskScheduler.swift */,
+				2367133C23F064CB00E189FF /* DataRefreshOperation.swift */,
+				2367131023F059BF00E189FF /* DataSync.swift */,
+				2367131E23F059C000E189FF /* CoreDataContainer.swift */,
+				2367130223F059BF00E189FF /* BaseView.swift */,
+				2367131D23F059BF00E189FF /* Constants.swift */,
+				236712E023F0583200E189FF /* LaunchScreen.storyboard */,
+				236712DE23F0583200E189FF /* Assets.xcassets */,
+				236712E323F0583200E189FF /* Info.plist */,
+				2367130323F059BF00E189FF /* Master */,
+				2367131123F059BF00E189FF /* Detail */,
+				2367130923F059BF00E189FF /* About */,
+				2367131423F059BF00E189FF /* Storage */,
+			);
+			path = Talula;
+			sourceTree = "<group>";
+		};
+		236712EB23F0583300E189FF /* TalulaTests */ = {
+			isa = PBXGroup;
+			children = (
+				236712EC23F0583300E189FF /* TalulaTests.swift */,
+				236712EE23F0583300E189FF /* Info.plist */,
+			);
+			path = TalulaTests;
+			sourceTree = "<group>";
+		};
+		2367130323F059BF00E189FF /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				2367130423F059BF00E189FF /* MasterSectionFooterView.swift */,
+				2367130523F059BF00E189FF /* MasterView.swift */,
+				2367130623F059BF00E189FF /* MasterViewController.swift */,
+				2367130723F059BF00E189FF /* MasterDelegateDataSource.swift */,
+				2367130823F059BF00E189FF /* MasterCell.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		2367130923F059BF00E189FF /* About */ = {
+			isa = PBXGroup;
+			children = (
+				2367130A23F059BF00E189FF /* InformationContactStackView.swift */,
+				2367130B23F059BF00E189FF /* InformationViewController.swift */,
+				2367130C23F059BF00E189FF /* InformationSmallRowView.swift */,
+				2367130D23F059BF00E189FF /* InformationBigRowView.swift */,
+				2367130E23F059BF00E189FF /* InformationIconsStackView.swift */,
+				2367130F23F059BF00E189FF /* InformationView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		2367131123F059BF00E189FF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2367131223F059BF00E189FF /* DetailView.swift */,
+				2367131323F059BF00E189FF /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2367131423F059BF00E189FF /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2367131523F059BF00E189FF /* SourceDataDownloader.swift */,
+				2367131623F059BF00E189FF /* Talula.xcdatamodeld */,
+				2367131823F059BF00E189FF /* SourceDataSync.swift */,
+				2367131923F059BF00E189FF /* Meteorite+CoreDataProperties.swift */,
+				2367131A23F059BF00E189FF /* MeteoriteStorage.swift */,
+				2367131B23F059BF00E189FF /* Meteorite+CoreDataClass.swift */,
+				2367131C23F059BF00E189FF /* MeteoriteDataURLFactory.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		CD0D24650E015B6D8CD8665B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				661F5613285450408857D89A /* Pods_Talula.framework */,
+				AEEF3B876E2F886424BB81A3 /* Pods_TalulaTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,15 +247,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		233409C72201A9B90030C269 /* Talula */ = {
+		236712CE23F0583200E189FF /* Talula */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 233409E52201A9BA0030C269 /* Build configuration list for PBXNativeTarget "Talula" */;
+			buildConfigurationList = 236712F123F0583300E189FF /* Build configuration list for PBXNativeTarget "Talula" */;
 			buildPhases = (
-				CB0F89372287336A6553EADF /* [CP] Check Pods Manifest.lock */,
-				233409C42201A9B90030C269 /* Sources */,
-				233409C52201A9B90030C269 /* Frameworks */,
-				233409C62201A9B90030C269 /* Resources */,
-				9BC9C09FDEDD7BC2FD8C7F19 /* [CP] Embed Pods Frameworks */,
+				C826FA787BDE8B489067B883 /* [CP] Check Pods Manifest.lock */,
+				236712CB23F0583200E189FF /* Sources */,
+				236712CC23F0583200E189FF /* Frameworks */,
+				236712CD23F0583200E189FF /* Resources */,
+				706ED57B0CD095EBFDC5D16F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,53 +263,48 @@
 			);
 			name = Talula;
 			productName = Talula;
-			productReference = 233409C82201A9B90030C269 /* Talula.app */;
+			productReference = 236712CF23F0583200E189FF /* Talula.app */;
 			productType = "com.apple.product-type.application";
 		};
-		233409DB2201A9BA0030C269 /* TalulaTests */ = {
+		236712E723F0583300E189FF /* TalulaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 233409E82201A9BA0030C269 /* Build configuration list for PBXNativeTarget "TalulaTests" */;
+			buildConfigurationList = 236712F423F0583300E189FF /* Build configuration list for PBXNativeTarget "TalulaTests" */;
 			buildPhases = (
-				76F37864D5198E816692F507 /* [CP] Check Pods Manifest.lock */,
-				233409D82201A9BA0030C269 /* Sources */,
-				233409D92201A9BA0030C269 /* Frameworks */,
-				233409DA2201A9BA0030C269 /* Resources */,
+				9EE19DC2C5CAFA30C025EFC2 /* [CP] Check Pods Manifest.lock */,
+				236712E423F0583300E189FF /* Sources */,
+				236712E523F0583300E189FF /* Frameworks */,
+				236712E623F0583300E189FF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				233409DE2201A9BA0030C269 /* PBXTargetDependency */,
+				236712EA23F0583300E189FF /* PBXTargetDependency */,
 			);
 			name = TalulaTests;
 			productName = TalulaTests;
-			productReference = 233409DC2201A9BA0030C269 /* TalulaTests.xctest */;
+			productReference = 236712E823F0583300E189FF /* TalulaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		233409C02201A9B90030C269 /* Project object */ = {
+		236712C723F0583100E189FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Diana Brnovik";
 				TargetAttributes = {
-					233409C72201A9B90030C269 = {
-						CreatedOnToolsVersion = 10.1;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
+					236712CE23F0583200E189FF = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
-					233409DB2201A9BA0030C269 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 233409C72201A9B90030C269;
+					236712E723F0583300E189FF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 236712CE23F0583200E189FF;
 					};
 				};
 			};
-			buildConfigurationList = 233409C32201A9B90030C269 /* Build configuration list for PBXProject "Talula" */;
+			buildConfigurationList = 236712CA23F0583100E189FF /* Build configuration list for PBXProject "Talula" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -308,30 +312,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 233409BF2201A9B90030C269;
-			productRefGroup = 233409C92201A9B90030C269 /* Products */;
+			mainGroup = 236712C623F0583100E189FF;
+			productRefGroup = 236712D023F0583200E189FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				233409C72201A9B90030C269 /* Talula */,
-				233409DB2201A9BA0030C269 /* TalulaTests */,
+				236712CE23F0583200E189FF /* Talula */,
+				236712E723F0583300E189FF /* TalulaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		233409C62201A9B90030C269 /* Resources */ = {
+		236712CD23F0583200E189FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237865972206009D00853EE3 /* Assets.xcassets in Resources */,
-				237362242207BD060087C60D /* IconAuthors.txt in Resources */,
-				237362222207B9F50087C60D /* Podfile in Resources */,
-				233409D62201A9BA0030C269 /* LaunchScreen.storyboard in Resources */,
+				2367137423F19C8400E189FF /* Podfile in Resources */,
+				236712E223F0583200E189FF /* LaunchScreen.storyboard in Resources */,
+				2367137623F19E1B00E189FF /* README.md in Resources */,
+				236712DF23F0583200E189FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		233409DA2201A9BA0030C269 /* Resources */ = {
+		236712E623F0583300E189FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,7 +345,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		76F37864D5198E816692F507 /* [CP] Check Pods Manifest.lock */ = {
+		706ED57B0CD095EBFDC5D16F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE19DC2C5CAFA30C025EFC2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,29 +384,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9BC9C09FDEDD7BC2FD8C7F19 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Talula/Pods-Talula-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB0F89372287336A6553EADF /* [CP] Check Pods Manifest.lock */ = {
+		C826FA787BDE8B489067B883 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,62 +409,65 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		233409C42201A9B90030C269 /* Sources */ = {
+		236712CB23F0583200E189FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237865AC220671EE00853EE3 /* InformationSmallRowView.swift in Sources */,
-				23C8D9CF220343FE0000B4FD /* DataSync.swift in Sources */,
-				23C8D9CD220246DE0000B4FD /* CoreDataContainer.swift in Sources */,
-				2321F9CD2201ACAC005A5000 /* MasterViewController.swift in Sources */,
-				2384C61A2201E42F005CDE9D /* MeteoriteStorage.swift in Sources */,
-				2321F9C92201AC61005A5000 /* BaseView.swift in Sources */,
-				237865A122065E7F00853EE3 /* InformationView.swift in Sources */,
-				2384C6182201E3A2005CDE9D /* Talula.xcdatamodeld in Sources */,
-				2321F9D32201B2FF005A5000 /* MasterCell.swift in Sources */,
-				237865B02207384A00853EE3 /* MeteoriteDataURLFactory.swift in Sources */,
-				237865A82206622700853EE3 /* InformationContactStackView.swift in Sources */,
-				233409CE2201A9B90030C269 /* DetailViewController.swift in Sources */,
-				23C8D9C9220225780000B4FD /* SourceDataDownloader.swift in Sources */,
-				23C8D9CB220226C30000B4FD /* SourceDataSync.swift in Sources */,
-				2321F9CF2201B00E005A5000 /* MasterView.swift in Sources */,
-				2384C6152201D944005CDE9D /* DetailView.swift in Sources */,
-				2378659F22065E7000853EE3 /* InformationViewController.swift in Sources */,
-				2304FA102201EC8000285E27 /* Meteorite+CoreDataProperties.swift in Sources */,
-				2384C6132201D3D7005CDE9D /* AppStarter.swift in Sources */,
-				2304FA0F2201EC8000285E27 /* Meteorite+CoreDataClass.swift in Sources */,
-				233409CC2201A9B90030C269 /* AppDelegate.swift in Sources */,
-				237865AA22066AC800853EE3 /* MasterSectionFooterView.swift in Sources */,
-				237865A422065FA700853EE3 /* InformationBigRowView.swift in Sources */,
-				2321F9D12201B0A2005A5000 /* MasterDelegateDataSource.swift in Sources */,
-				237865A62206621800853EE3 /* InformationIconsStackView.swift in Sources */,
-				2321F9D52201B667005A5000 /* Constants.swift in Sources */,
+				2367134123F06F0200E189FF /* TaskScheduler.swift in Sources */,
+				2367132C23F059C000E189FF /* DataSync.swift in Sources */,
+				2367132B23F059C000E189FF /* InformationView.swift in Sources */,
+				2367133023F059C000E189FF /* Talula.xcdatamodeld in Sources */,
+				2367132D23F059C000E189FF /* DetailView.swift in Sources */,
+				2367133F23F06AE800E189FF /* AppDelegate.swift in Sources */,
+				2367133223F059C000E189FF /* Meteorite+CoreDataProperties.swift in Sources */,
+				2367133723F059C000E189FF /* CoreDataContainer.swift in Sources */,
+				2367132223F059C000E189FF /* MasterView.swift in Sources */,
+				2367132723F059C000E189FF /* InformationViewController.swift in Sources */,
+				2367133623F059C000E189FF /* Constants.swift in Sources */,
+				2367133D23F064CB00E189FF /* DataRefreshOperation.swift in Sources */,
+				2367133523F059C000E189FF /* MeteoriteDataURLFactory.swift in Sources */,
+				2367133B23F05D9500E189FF /* SceneDelegate.swift in Sources */,
+				2367132423F059C000E189FF /* MasterDelegateDataSource.swift in Sources */,
+				2367132A23F059C000E189FF /* InformationIconsStackView.swift in Sources */,
+				2367132E23F059C000E189FF /* DetailViewController.swift in Sources */,
+				2367132923F059C000E189FF /* InformationBigRowView.swift in Sources */,
+				2367131F23F059C000E189FF /* AppStarter.swift in Sources */,
+				2367132823F059C000E189FF /* InformationSmallRowView.swift in Sources */,
+				2367133323F059C000E189FF /* MeteoriteStorage.swift in Sources */,
+				2367132123F059C000E189FF /* MasterSectionFooterView.swift in Sources */,
+				2367133123F059C000E189FF /* SourceDataSync.swift in Sources */,
+				2367133423F059C000E189FF /* Meteorite+CoreDataClass.swift in Sources */,
+				2367132523F059C000E189FF /* MasterCell.swift in Sources */,
+				2367132623F059C000E189FF /* InformationContactStackView.swift in Sources */,
+				2367132323F059C000E189FF /* MasterViewController.swift in Sources */,
+				2367132F23F059C000E189FF /* SourceDataDownloader.swift in Sources */,
+				2367132023F059C000E189FF /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		233409D82201A9BA0030C269 /* Sources */ = {
+		236712E423F0583300E189FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				233409E12201A9BA0030C269 /* TalulaTests.swift in Sources */,
+				236712ED23F0583300E189FF /* TalulaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		233409DE2201A9BA0030C269 /* PBXTargetDependency */ = {
+		236712EA23F0583300E189FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 233409C72201A9B90030C269 /* Talula */;
-			targetProxy = 233409DD2201A9BA0030C269 /* PBXContainerItemProxy */;
+			target = 236712CE23F0583200E189FF /* Talula */;
+			targetProxy = 236712E923F0583300E189FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		233409D42201A9BA0030C269 /* LaunchScreen.storyboard */ = {
+		236712E023F0583200E189FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				233409D52201A9BA0030C269 /* Base */,
+				236712E123F0583200E189FF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -473,7 +475,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		233409E32201A9BA0030C269 /* Debug */ = {
+		236712EF23F0583300E189FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -505,7 +507,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -524,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -534,7 +535,7 @@
 			};
 			name = Debug;
 		};
-		233409E42201A9BA0030C269 /* Release */ = {
+		236712F023F0583300E189FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -566,7 +567,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -579,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -589,83 +589,85 @@
 			};
 			name = Release;
 		};
-		233409E62201A9BA0030C269 /* Debug */ = {
+		236712F223F0583300E189FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77C6EBFC0310351F30C37981 /* Pods-Talula.debug.xcconfig */;
+			baseConfigurationReference = 2634E4E775BD7D0E0A7C2CE2 /* Pods-Talula.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8UAN795U56;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
 				INFOPLIST_FILE = Talula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.Talula;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.Talula;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		233409E72201A9BA0030C269 /* Release */ = {
+		236712F323F0583300E189FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C812E33CC1752583EC8BBFEE /* Pods-Talula.release.xcconfig */;
+			baseConfigurationReference = D7B622A0D0C7D6E402751505 /* Pods-Talula.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8UAN795U56;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
 				INFOPLIST_FILE = Talula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.Talula;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.Talula;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		233409E92201A9BA0030C269 /* Debug */ = {
+		236712F523F0583300E189FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2839A85C2062DF988D26CE8A /* Pods-TalulaTests.debug.xcconfig */;
+			baseConfigurationReference = 7341094FBFCD0B08FB376737 /* Pods-TalulaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8UAN795U56;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
 				INFOPLIST_FILE = TalulaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.TalulaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.TalulaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talula.app/Talula";
 			};
 			name = Debug;
 		};
-		233409EA2201A9BA0030C269 /* Release */ = {
+		236712F623F0583300E189FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2BDB717D655483852E269DC /* Pods-TalulaTests.release.xcconfig */;
+			baseConfigurationReference = 857F3A93E32C0F9764905F38 /* Pods-TalulaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8UAN795U56;
+				DEVELOPMENT_TEAM = AYSUFL54D5;
 				INFOPLIST_FILE = TalulaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sk.brnovik.app.TalulaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.xbrnovik.TalulaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talula.app/Talula";
 			};
@@ -674,29 +676,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		233409C32201A9B90030C269 /* Build configuration list for PBXProject "Talula" */ = {
+		236712CA23F0583100E189FF /* Build configuration list for PBXProject "Talula" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				233409E32201A9BA0030C269 /* Debug */,
-				233409E42201A9BA0030C269 /* Release */,
+				236712EF23F0583300E189FF /* Debug */,
+				236712F023F0583300E189FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		233409E52201A9BA0030C269 /* Build configuration list for PBXNativeTarget "Talula" */ = {
+		236712F123F0583300E189FF /* Build configuration list for PBXNativeTarget "Talula" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				233409E62201A9BA0030C269 /* Debug */,
-				233409E72201A9BA0030C269 /* Release */,
+				236712F223F0583300E189FF /* Debug */,
+				236712F323F0583300E189FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		233409E82201A9BA0030C269 /* Build configuration list for PBXNativeTarget "TalulaTests" */ = {
+		236712F423F0583300E189FF /* Build configuration list for PBXNativeTarget "TalulaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				233409E92201A9BA0030C269 /* Debug */,
-				233409EA2201A9BA0030C269 /* Release */,
+				236712F523F0583300E189FF /* Debug */,
+				236712F623F0583300E189FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -704,17 +706,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2384C6162201E3A2005CDE9D /* Talula.xcdatamodeld */ = {
+		2367131623F059BF00E189FF /* Talula.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2384C6172201E3A2005CDE9D /* Talula.xcdatamodel */,
+				2367131723F059BF00E189FF /* Talula.xcdatamodel */,
 			);
-			currentVersion = 2384C6172201E3A2005CDE9D /* Talula.xcdatamodel */;
+			currentVersion = 2367131723F059BF00E189FF /* Talula.xcdatamodel */;
 			path = Talula.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 233409C02201A9B90030C269 /* Project object */;
+	rootObject = 236712C723F0583100E189FF /* Project object */;
 }

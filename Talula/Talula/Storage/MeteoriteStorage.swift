@@ -28,7 +28,7 @@ class MeteoriteStorage {
         do {
             try aFetchedResultsController.performFetch()
         } catch let error as NSError {
-            print("Fetch error: \(error.debugDescription)")
+            NSLog("Fetch error: \(error.debugDescription)")
             abort()
         }
         //Set fetchedResultController with cached data.
@@ -65,7 +65,7 @@ class MeteoriteStorage {
         do {
             try fetchedResultsController.performFetch()
         } catch let error as NSError {
-            print("Fetch error: \(error)")
+            NSLog("Fetch error: \(error)")
             abort()
         }
         return fetchedResultsController.fetchedObjects?.first as? Meteorite
@@ -87,7 +87,7 @@ class MeteoriteStorage {
                 // Saves changes.
                 try managedObjectContext.save()
             } catch let error as NSError {
-                print("Save error: \(error.debugDescription).")
+                NSLog("Save error: \(error.debugDescription).")
             }
             // Frees cache.
             managedObjectContext.reset()

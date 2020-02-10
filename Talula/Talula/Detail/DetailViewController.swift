@@ -41,7 +41,10 @@ class DetailViewController: UIViewController {
         let latitude: CLLocationDegrees = meteorite.latitude
         let longitude: CLLocationDegrees = meteorite.longitude
         let location = CLLocationCoordinate2DMake(latitude, longitude)
-        let span = MKCoordinateSpan(latitudeDelta: Constants.map.latitudeDelta, longitudeDelta: Constants.map.longitudeDelta)
+        let span = MKCoordinateSpan(
+            latitudeDelta: Constants.map.latitudeDelta,
+            longitudeDelta: Constants.map.longitudeDelta
+        )
         let region = MKCoordinateRegion(center: location, span: span)
         // Creates new annotation and set region.
         let newAnnotation = MKPointAnnotation()
@@ -50,7 +53,6 @@ class DetailViewController: UIViewController {
         newAnnotation.subtitle = meteorite.geotype
         detailView.mapView.addAnnotation(newAnnotation)
         detailView.mapView.setRegion(region, animated: true)
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -61,6 +63,4 @@ class DetailViewController: UIViewController {
             detailView.mapView.removeAnnotations(oldAnnotations)
         }
     }
-
 }
-

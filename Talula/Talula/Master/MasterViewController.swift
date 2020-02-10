@@ -19,8 +19,11 @@ class MasterViewController: UIViewController {
         return view
     }()
     
-    var masterDelegateDataSource: MasterDelegateDataSource? = nil
-    var meteoriteStorage: MeteoriteStorage? = nil
+    var masterDelegateDataSource: MasterDelegateDataSource?
+    var meteoriteStorage: MeteoriteStorage?
+    
+    let detailViewConstroller = DetailViewController()
+    let informationController = InformationViewController()
     
     // MARK: - Init
     
@@ -30,16 +33,12 @@ class MasterViewController: UIViewController {
         self.title = "Meteorites"
         // Sets storage.
         self.meteoriteStorage = MeteoriteStorage(self)
-        guard
-            let meteoriteStorage = meteoriteStorage
-        else {
-            return
-        }
+        guard let meteoriteStorage = meteoriteStorage else { return }
         // Sets delegates.
         masterDelegateDataSource = MasterDelegateDataSource(meteoritesFRC: meteoriteStorage.fetchedResultsController)
         masterView.listView.delegate = masterDelegateDataSource
         masterView.listView.dataSource = masterDelegateDataSource
-        masterDelegateDataSource?.presentDetailHandler = { [weak self] (meteorite) in
+        masterDelegateDataSource?.presentDetailHandler = { [weak self] meteorite in
             self?.presentDetail(meteorite: meteorite)
         }
         // Sets info button.
@@ -62,14 +61,12 @@ class MasterViewController: UIViewController {
     
     /// Presents detail view.
     func presentDetail(meteorite: Meteorite) {
-        let detailViewConstroller = DetailViewController()
         detailViewConstroller.setModel(meteorite)
         self.navigationController?.pushViewController(detailViewConstroller, animated: true)
     }
     
     /// Presents informational view.
     @objc func presentInformation() {
-        let informationController = InformationViewController()
         self.navigationController?.pushViewController(informationController, animated: true)
     }
     
@@ -80,10 +77,9 @@ extension MasterViewController: NSFetchedResultsControllerDelegate {
     /// Updates meteorites tableview with new content saved.
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         DispatchQueue.main.async { [weak self] in
-            if let self = self {
-                self.setAnimation(for: self.masterView.listView)
-                self.masterView.listView.reloadData()
-            }
+            guard let self = self else { return }
+            self.setAnimation(for: self.masterView.listView)
+            self.masterView.listView.reloadData()
         }
     }
     

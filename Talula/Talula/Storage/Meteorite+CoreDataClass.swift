@@ -11,6 +11,4 @@ import Foundation
 import CoreData
 
 @objc(Meteorite)
-public class Meteorite: NSManagedObject {
-
-}
+public class Meteorite: NSManagedObject { }

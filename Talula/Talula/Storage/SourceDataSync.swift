@@ -39,9 +39,7 @@ class SourceDataSync {
                 return
             }
             // Checks if data are obtained.
-            guard
-                let dataDictionary = dataDictionary
-            else {
+            guard let dataDictionary = dataDictionary else {
                 let error = NSError(domain: Constants.error.dataDomain, code: Constants.error.incorrectDataFormat, userInfo: nil)
                 completion(error)
                 return
@@ -95,7 +93,7 @@ class SourceDataSync {
                 do {
                     try meteorite?.update(with: meteoriteDictionary) //set properties
                 } catch let error as NSError{
-                    print("Update error: \(error.debugDescription).")
+                    NSLog("Update error: \(error.debugDescription).")
                     context.delete(meteorite!)
                 }
                

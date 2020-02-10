@@ -11,30 +11,17 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var appStarter: AppStarter?
-    var dataSync: DataSync?
+    /// Manager of data downloads tasks.
+    var taskScheduler: TaskScheduler?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Creates master view.
-        self.appStarter = AppStarter()
-        // Starts data download if necessary.
-        self.dataSync = DataSync()
-        //On the first launch is not called "applicationWillEnterForeground".
-        self.dataSync?.foregroundRun()
+        self.taskScheduler = TaskScheduler()
+        self.taskScheduler?.foregroundRun()
+        self.taskScheduler?.registerTask()
         return true
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
-    }
-    
-    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        self.dataSync?.backgroundRun(completionHandler)
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        self.dataSync?.foregroundRun()
+        self.taskScheduler?.foregroundRun()
     }
-
 }

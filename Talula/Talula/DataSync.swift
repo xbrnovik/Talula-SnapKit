@@ -11,52 +11,8 @@ import UIKit
 
 class DataSync {
     
-    /**
-     Updates meteorite data on background call.
-     
-     - Parameter completionHandler: Complection handling result of data fetch.
-     */
-    func backgroundRun(_ completionHandler: @escaping (UIBackgroundFetchResult) -> ()) {
-        if needsUpdateData() {
-            let all = needsDownloadAllData()
-            SourceDataSync().fetchMeteorites(all: all) { [unowned self] (error) in
-                if let error = error {
-                    print("Fetch error: \(error)")
-                    completionHandler(.failed)
-                } else {
-                    completionHandler(.newData)
-                    self.setLastUpdated()
-                }
-            }
-        }
-    }
-    
-    /// Updates meteorite data on foreground call.
-    func foregroundRun() {
-        if needsUpdateData() {
-            let all = needsDownloadAllData()
-            SourceDataSync().fetchMeteorites(all: all) { [unowned self] (error) in
-                if let error = error {
-                    print("Fetch error: \(error)")
-                } else {
-                    self.setLastUpdated()
-                }
-            }
-        }
-    }
-    
-    /// Sets when was last successfull update (sync) of meteorites.
-    private func setLastUpdated() {
-        let timestamp = Int(Date().timeIntervalSince1970)
-        UserDefaults.standard.set(timestamp, forKey: Constants.dataSync.timestampKey)
-    }
-    
-    /**
-     Finds out if it is neccessary download new data.
-     
-     - Returns: Bool value saying if it is neccessary download new data.
-     */
-    private func needsUpdateData() -> Bool {
+    /// Bool value saying if it is neccessary download new data.
+    var needsUpdateData: Bool {
         var result = true
         // If updateTimestamp is not set, UserDefaults return 0.
         let updateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
@@ -69,12 +25,8 @@ class DataSync {
         return result
     }
     
-    /**
-     Finds out if it is neccessary download all data.
-     
-     - Returns: Bool value saying if it is neccessary download all data.
-     */
-    private func needsDownloadAllData() -> Bool {
+    /// Bool value saying if it is neccessary download all data.
+    var needsDownloadAllData: Bool {
         var result = false
         // If updateTimestamp is not set, UserDefaults return 0.
         let updateTimestamp = UserDefaults.standard.integer(forKey: Constants.dataSync.timestampKey)
@@ -82,6 +34,44 @@ class DataSync {
             result = true
         }
         return result
+    }
+    
+    /**
+     Updates meteorite data on background call.
+     
+     - Parameter completionHandler: Complection handling result of data fetch.
+     */
+    func backgroundRun() {
+        guard needsUpdateData else {
+            return
+        }
+        SourceDataSync().fetchMeteorites(all: needsDownloadAllData) { [unowned self] (error) in
+            if let error = error {
+                NSLog("Fetch error: \(error)")
+            } else {
+                self.setLastUpdated()
+            }
+        }
+    }
+    
+    /// Updates meteorite data on foreground call.
+    func foregroundRun() {
+        guard needsUpdateData else {
+            return
+        }
+        SourceDataSync().fetchMeteorites(all: needsDownloadAllData) { [unowned self] (error) in
+            if let error = error {
+                NSLog("Fetch error: \(error)")
+            } else {
+                self.setLastUpdated()
+            }
+        }
+    }
+    
+    /// Sets when was last successfull update (sync) of meteorites.
+    private func setLastUpdated() {
+        let timestamp = Int(Date().timeIntervalSince1970)
+        UserDefaults.standard.set(timestamp, forKey: Constants.dataSync.timestampKey)
     }
     
 }
