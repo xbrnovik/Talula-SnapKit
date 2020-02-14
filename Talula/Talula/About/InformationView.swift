@@ -90,7 +90,7 @@ class InformationView: BaseView {
     
     override init() {
         super.init()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = .systemBackground
         self.view.addSubview(outerView)
         self.outerView.addSubview(scrollView)
         self.scrollView.addSubview(innerView)

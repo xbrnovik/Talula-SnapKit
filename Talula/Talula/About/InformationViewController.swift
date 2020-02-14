@@ -12,7 +12,7 @@ class InformationViewController: UIViewController {
     
     let informationView: InformationView = {
         let view = InformationView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .systemBackground
         return view
     }()
     

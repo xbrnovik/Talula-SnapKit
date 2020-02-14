@@ -49,7 +49,7 @@ class InformationIconsStackView: UIStackView {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.spacing = 10
         self.setNeedsUpdateConstraints()
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
         self.addArrangedSubview(meteoriteATypeView)
         self.addArrangedSubview(meteoriteBTypeView)
         self.addArrangedSubview(meteoriteCTypeView)

@@ -29,7 +29,7 @@ class InformationSmallRowView: BaseView {
     override init() {
         super.init()
         self.setNeedsUpdateConstraints()
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
         self.view.addSubview(titleLabel)
         self.view.addSubview(iconImageView)
     }

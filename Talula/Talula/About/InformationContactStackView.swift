@@ -35,7 +35,7 @@ class InformationContactStackView: UIStackView {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.spacing = 5
         self.setNeedsUpdateConstraints()
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
         self.addArrangedSubview(gmailView)
         self.addArrangedSubview(linkedInView)
     }
